@@ -8,7 +8,7 @@ export default function UserLayout({ children }: { children: any }) {
       <UserTopbar />
       <div className='flex flex-row p-4 gap-4'>
         <UserLeftSidebar />
-        <div className='w-3/5 flex flex-col'>
+        <div className='w-3/5 flex flex-col gap-5'>
           {children}
         </div>
         <UserRightSidebar />

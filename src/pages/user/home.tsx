@@ -21,6 +21,28 @@ export default function UserHome() {
           <i className="bi bi-chevron-right text-2xl"></i>
         </div>
       </div>
+      <div className="flex flex-col gap-3">
+        <div className="flex flex-row items-center justify-between">
+          <h2 className="font-medium text-xl">Temukan Partner</h2>
+          <a href="#" className="text-relazee-blue">Temukan lebih <i className="bi bi-chevron-right"></i></a>
+        </div>
+        <div className="bg-white rounded-lg py-3 px-4 flex flex-row items-center justify-between">
+          <p className="text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <a href="#" className="text-relazee-blue font-medium">FAQ</a>
+        </div>
+        <div>This one is for multi-carousel</div>
+      </div>
+      <div className="flex flex-col gap-3">
+        <div className="flex flex-row items-center justify-between">
+          <h2 className="font-medium text-xl">Kompetisi</h2>
+          <a href="#" className="text-relazee-blue">Temukan lebih <i className="bi bi-chevron-right"></i></a>
+        </div>
+        <div className="bg-white rounded-lg py-3 px-4 flex flex-row items-center justify-between">
+          <p className="text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <a href="#" className="text-relazee-blue font-medium">FAQ</a>
+        </div>
+        <div>This one is for multi-carousel</div>
+      </div>
     </UserLayout>
   )
 }
