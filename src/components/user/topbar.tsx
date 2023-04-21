@@ -7,7 +7,7 @@ export default function UserTopbar() {
         <div className="bg-white py-2">
             <div className="container mx-auto flex flex-row justify-between items-center">
                 <img src={Logo} alt="" />
-                <input type="text" placeholder="Pencarian" className='rounded-md bg-relazee-gray px-3 py-1' />
+                <input type="text" placeholder="Pencarian" className='rounded-md bg-relazee-gray px-3 py-1 w-72' />
                 <div className='flex flex-row gap-5 items-center'>
                     <a href="#"><i className="bi bi-bell"></i></a>
                     <a href="#"><i className="bi bi-chat-left-dots"></i></a>
