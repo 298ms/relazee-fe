@@ -8,7 +8,7 @@ export default function UserLayout({ children }: { children: any }) {
       <UserTopbar />
       <div className='flex flex-row p-4 gap-4 h-full'>
         <UserLeftSidebar />
-        <div className='w-3/5 flex flex-col gap-5 max-h-[90vh] overflow-y-scroll overflow-x-hidden'>
+        <div className='w-3/5 flex flex-col gap-5 max-h-[90vh] overflow-y-scroll overflow-x-hidden no-scrollbar'>
           {children}
         </div>
         <UserRightSidebar />
