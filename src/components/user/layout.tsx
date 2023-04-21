@@ -1,5 +1,18 @@
-export default function UserLayout() {
+import UserLeftSidebar from './left-sidebar'
+import UserRightSidebar from './right-sidebar'
+import UserTopbar from './topbar'
+
+export default function UserLayout({ children }: { children: any }) {
   return (
-    <div>UserLayout</div>
+    <div className='bg-relazee-gray w-full min-h-screen'>
+      <UserTopbar />
+      <div className='flex flex-row p-4 gap-4'>
+        <UserLeftSidebar />
+        <div className='w-3/5 flex flex-col'>
+          {children}
+        </div>
+        <UserRightSidebar />
+      </div>
+    </div>
   )
 }
