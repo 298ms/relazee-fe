@@ -36,7 +36,7 @@ export default function UserHome() {
   ]
 
   return (
-    <div className='bg-relazee-gray w-full h-screen'>
+    <div className='bg-relazee-gray w-full min-h-screen'>
       <div className="bg-white py-2">
         <div className="container mx-auto flex flex-row justify-between items-center">
           <img src={Logo} alt="" />
@@ -51,7 +51,7 @@ export default function UserHome() {
           </div>
         </div>
       </div>
-      <div className='flex flex-row p-4'>
+      <div className='flex flex-row p-4 gap-4'>
         <div className="bg-white rounded-lg py-8 flex flex-col items-stretch gap-10 w-1/5">
           <div className="flex flex-col items-center">
             <div className={`bg-center bg-cover rounded-full w-12 aspect-square bg-[url('${dummyPhoto}')]`}></div>
@@ -81,7 +81,26 @@ export default function UserHome() {
             </a>
           </div>
         </div>
-        <div className='w-auto'></div>
+        <div className='w-3/5 flex flex-col'>
+          <div className='flex flex-row items-stretch text-white gap-4'>
+            <div className='bg-relazee-blue rounded-lg w-1/2 flex flex flex-row items-center justify-between gap-5 p-6'>
+              <i className="bi bi-robot text-3xl"></i>
+              <div>
+                <h3 className='text-xl font-medium'>Bot Cari Partner</h3>
+                <p className='text-sm'>Kesulitan menemukan partner yang sesuai? Temukan partnermu dengan bantuan BOT dalam hitungan detik!</p>
+              </div>
+              <i className="bi bi-chevron-right text-2xl"></i>
+            </div>
+            <div className='bg-relazee-blue rounded-lg w-1/2 flex flex flex-row items-center justify-between gap-5 p-6'>
+              <i className="bi bi-file-earmark-plus-fill text-3xl"></i>
+              <div>
+                <h3 className='text-xl font-medium'>Upload Kompetisi</h3>
+                <p className='text-sm'>Buat eventmu lebih terlihat dan dikenal semua orang. Mulai sekarang, sebarkan eventmu dengan cepat dan mudah!</p>
+              </div>
+              <i className="bi bi-chevron-right text-2xl"></i>
+            </div>
+          </div>
+        </div>
         <div className='bg-white rounded-lg py-8 flex flex-col w-1/5 px-6 ml-auto gap-7'>
           <div className='flex flex-col items-stretch gap-5'>
             <div className='flex flex-row items-center justify-between'>
@@ -112,7 +131,7 @@ export default function UserHome() {
                     <div className={`bg-center bg-cover rounded-full w-6 aspect-square bg-[url('${dummyPhoto}')]`}></div>
                     <span className='text-sm text-gray-500'>{history.name}</span>
                   </div>
-                  <div className={`rounded-full w-2 aspect-square ${history.isOnline? 'bg-green-500' : 'bg-gray-400'}`}></div>
+                  <div className={`rounded-full w-2 aspect-square ${history.isOnline ? 'bg-green-500' : 'bg-gray-400'}`}></div>
                 </div>
               ))}
             </div>
