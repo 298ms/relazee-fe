@@ -1,4 +1,4 @@
-export default function UserRightSidebar() {
+export default function UserRightSidebar(props:any) {
   const dummyPhoto = 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
   const dummyTeam = [
     {
@@ -34,7 +34,7 @@ export default function UserRightSidebar() {
   ]
 
   return (
-    <div className='bg-white rounded-lg py-8 flex flex-col w-1/5 px-6 ml-auto gap-7'>
+    <div className={`bg-white rounded-lg py-8 flex flex-col w-1/5 px-6 ml-auto gap-7 ${props.className}`}>
       <div className='flex flex-col items-stretch gap-5'>
         <div className='flex flex-row items-center justify-between'>
           <span className='text-lg font-medium'>Tim</span>
