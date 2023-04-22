@@ -1,7 +1,7 @@
 import Logo from '../../assets/logo.png'
 
 export default function UserTopbar(props:any) {
-    const dummyPhoto = 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+    const dummyPhoto = 'https://source.unsplash.com/random/?person'
 
     return (
         <div className={`bg-white py-2 ${props.className}`}>
@@ -12,7 +12,7 @@ export default function UserTopbar(props:any) {
                     <a href="#"><i className="bi bi-bell"></i></a>
                     <a href="#"><i className="bi bi-chat-left-dots"></i></a>
                     <div className='flex flex-row items-center gap-1'>
-                        <div className={`bg-center bg-cover bg-[url('${dummyPhoto}')] w-7 aspect-square rounded-full`}></div>
+                        <div className="bg-center bg-cover w-7 aspect-square rounded-full" style={{ backgroundImage: `url(${dummyPhoto})` }}></div>
                         <i className="bi bi-caret-down-fill text-xs"></i>
                     </div>
                 </div>

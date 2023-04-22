@@ -1,10 +1,10 @@
 export default function UserLeftSidebar(props:any) {
-    const dummyPhoto = 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'
+    const dummyPhoto = 'https://source.unsplash.com/random/?person'
 
     return (
         <div className={`bg-white rounded-lg py-8 flex flex-col items-stretch gap-10 w-1/5 ${props.className}`}>
             <div className="flex flex-col items-center">
-                <div className={`bg-center bg-cover rounded-full w-12 aspect-square bg-[url('${dummyPhoto}')]`}></div>
+                <div className="bg-center bg-cover rounded-full w-12 aspect-square" style={{ backgroundImage: `url(${dummyPhoto})` }}></div>
                 <span className="text-lg font-medium">Le Minerale</span>
                 <a href="#" className="text-gray-500 text-sm">View Profile</a>
             </div>
