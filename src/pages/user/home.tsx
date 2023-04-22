@@ -1,7 +1,11 @@
 import UserLayout from "../../components/user/layout";
 import DummyPoster from '../../assets/dummy-poster.png'
+import PartnerCarousel from "../../components/user/partner-carousel";
+import PartnerCard from "../../components/user/partner-card";
 
 export default function UserHome() {
+    const dummyPhoto = 'https://source.unsplash.com/random/?person'
+
     return (
         <UserLayout>
             <div className='flex flex-row items-stretch text-white gap-4'>
@@ -31,7 +35,12 @@ export default function UserHome() {
                     <p className="text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <a href="#" className="text-relazee-blue font-medium">FAQ</a>
                 </div>
-                <div>This one is for multi-carousel</div>
+                {/* <div>This one is for multi-carousel</div> */}
+                <PartnerCarousel>
+                    <PartnerCard />
+                    <PartnerCard />
+                    <PartnerCard />
+                </PartnerCarousel>
             </div>
             <div className="flex flex-col gap-3">
                 <div className="flex flex-row items-center justify-between">
