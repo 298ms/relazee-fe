@@ -2,6 +2,7 @@ import UserLayout from "../../components/user/layout";
 import DummyPoster from '../../assets/dummy-poster.png'
 import PartnerCarousel from "../../components/user/partner-carousel";
 import PartnerCard from "../../components/user/partner-card";
+import { Link } from "react-router-dom";
 
 export default function UserHome() {
     const dummyPhoto = 'https://source.unsplash.com/random/?person'
@@ -65,10 +66,10 @@ export default function UserHome() {
                 </div>
                 <div className="grid grid-cols-3 gap-3">
                     {dummyKompetisi && dummyKompetisi.map((kompetisi) => (
-                        <div className="rounded-lg bg-white p-4 flex flex-col items-center gap-3 max-w-1/3">
+                        <Link to="/kompetisi/1" className="rounded-lg bg-white p-4 flex flex-col items-center gap-3 max-w-1/3">
                             <img src={DummyPoster} alt="" />
                             <h4 className="font-medium text-sm text-gray-500 text-center">{kompetisi.name}</h4>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
