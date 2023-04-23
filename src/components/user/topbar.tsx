@@ -40,7 +40,7 @@ function SearchDropdown(props: any) {
     ]
 
     return (
-        <div className='bg-white p-6 flex flex-col gap-3 shadow-lg'>
+        <div className='bg-white p-6 flex flex-col gap-3 shadow-lg rounded-lg'>
             {dummySearch && dummySearch.map((search) => (
                 <div className='flex flex-row gap-3 items-center'>
                     <div className='bg-center bg-cover w-9 aspect-square rounded-full' style={{ backgroundImage: `url(${dummyPhoto})` }}></div>
