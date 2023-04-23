@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Logo from '../../assets/logo.png'
 
 const dummyPhoto = 'https://source.unsplash.com/random/?person'
 
-function ProfileDropdown(props: any) {
+function ProfileDropdown({ ...props }) {
     return (
-        <div className='bg-white rounded-lg p-6 flex flex-col gap-3 absolute right-5 top-14 shadow-lg'>
+        <div className='bg-white rounded-lg p-6 flex flex-col gap-3 shadow-lg' {...props}>
             <div className='flex flex-row gap-3 items-center justify-between'>
                 <div className='bg-center bg-cover w-9 aspect-square rounded-full' style={{ backgroundImage: `url(${dummyPhoto})` }}></div>
                 <div className='flex flex-col'>
@@ -23,12 +23,31 @@ function ProfileDropdown(props: any) {
     )
 }
 
+function SearchDropdown(props: any) {
+    return (
+        <div></div>
+    )
+}
+
 export default function UserTopbar(props: any) {
     const [showDropdown, setShowDropdown] = useState(false)
+    const profileDropdownRef = useRef<HTMLDivElement>(null)
+
+    const closeDropdown = (e: Event) => {
+        if (profileDropdownRef.current && showDropdown && !profileDropdownRef.current.contains(e.target as Node)) {
+            setShowDropdown(false)
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('mousedown', closeDropdown)
+    })
 
     return (
         <div className={`bg-white py-2 relative ${props.className}`}>
-            {showDropdown && <ProfileDropdown />}
+            {showDropdown && <div className='absolute right-5 top-14' ref={profileDropdownRef}>
+                <ProfileDropdown />
+            </div>}
             <div className="container mx-auto flex flex-row justify-between items-center">
                 <img src={Logo} alt="" />
                 <input type="text" placeholder="Pencarian" className='rounded-md bg-relazee-gray px-3 py-1 w-72' />
