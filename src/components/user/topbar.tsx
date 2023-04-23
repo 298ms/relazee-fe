@@ -75,10 +75,11 @@ export default function UserTopbar(props: any) {
     })
 
     return (
-        <div className={`bg-white py-2 relative ${props.className}`}>
-            {showProfileDropdown && <div className='absolute right-5 top-14' ref={profileDropdownRef}>
+        <div className={`bg-white py-2 relative z-10 ${props.className}`}>
+            {showProfileDropdown && <div className='absolute right-5 top-14 z-10' ref={profileDropdownRef}>
                 <ProfileDropdown />
             </div>}
+            {showSearchDropdown && <div className='bg-black/50 absolute top-[100%] left-0 h-screen w-full'></div>}
             <div className="container mx-auto flex flex-row justify-between items-center">
                 <img src={Logo} alt="" />
                 <div className='w-72 relative'>
