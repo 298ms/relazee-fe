@@ -16,7 +16,7 @@ const CustomRightArrow = ({ onClick, ...rest }:any) => {
     } = rest;
     // onMove means if dragging or swiping in progress.
     return (
-        <button className='bg-[#444444] w-10 aspect-square text-white rounded-full absolute right-0' onClick={() => onClick()}>
+        <button className='bg-relazee-black w-10 aspect-square text-white rounded-full absolute right-0' onClick={() => onClick()}>
             <i className="bi bi-caret-right-fill font-bold"></i>
         </button>
     )
@@ -29,7 +29,7 @@ const CustomLeftArrow = ({ onClick, ...rest }:any) => {
     } = rest;
     // onMove means if dragging or swiping in progress.
     return (
-        <button className='bg-[#444444] w-10 aspect-square text-white rounded-full absolute left-0' onClick={() => onClick()}>
+        <button className='bg-relazee-black w-10 aspect-square text-white rounded-full absolute left-0' onClick={() => onClick()}>
             <i className="bi bi-caret-left-fill font-bold"></i>
         </button>
     )
