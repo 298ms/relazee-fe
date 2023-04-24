@@ -56,9 +56,9 @@ export default function UserKompetisiDetail() {
                     <img src={DummyPoster} alt="" className="w-full rounded-md" />
                     <div className="flex flex-col gap-5 w-full">
                         <div className="flex flex-row text-center">
-                            <NavLink to="info" className={({ isActive, isPending }) => `w-full py-2 ${isActive ? "border-b-2 border-relazee-blue" : "border-b border-relazee-gray"}`
+                            <NavLink replace to="info" className={({ isActive, isPending }) => `w-full py-2 ${isActive ? "border-b-2 border-relazee-blue" : "border-b border-relazee-gray"}`
                             }>Informasi Penting</NavLink>
-                            <NavLink to="deskripsi" className={({ isActive, isPending }) => `w-full py-2 ${isActive ? "border-b-2 border-relazee-blue" : "border-b border-relazee-gray"}`
+                            <NavLink replace to="deskripsi" className={({ isActive, isPending }) => `w-full py-2 ${isActive ? "border-b-2 border-relazee-blue" : "border-b border-relazee-gray"}`
                             }>Deskripsi</NavLink>
                         </div>
                         <div>
