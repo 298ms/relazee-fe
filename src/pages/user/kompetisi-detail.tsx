@@ -4,12 +4,40 @@ import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 
 export function UserKompetisiDetailInfo() {
     return (
-        <div>Info</div>
+        <div className="flex flex-col gap-4">
+            <div className="flex flex-col">
+                <h3 className="text-gray-500 text-xs font-light">Jumlah Tim</h3>
+                <span>3-5 orang</span>
+            </div>
+            <div className="flex flex-col">
+                <h3 className="text-gray-500 text-xs font-light">Hadiah</h3>
+                <span>Rp 8.000.000</span>
+            </div>
+            <div className="flex flex-col">
+                <h3 className="text-gray-500 text-xs font-light">Biaya Pendaftaran</h3>
+                <span>Gratis</span>
+            </div>
+            <div className="flex flex-col">
+                <h3 className="text-gray-500 text-xs font-light">Periode Pendaftaran</h3>
+                <span>20 Mei 2023 - 12 Juni 2023</span>
+            </div>
+            <div className="flex flex-col">
+                <h3 className="text-gray-500 text-xs font-light">Kategori</h3>
+                <span>Karya Tulis Ilmiah</span>
+            </div>
+            <div className="flex flex-col">
+                <h3 className="text-gray-500 text-xs font-light">Link Pendaftaran</h3>
+                <a href="#">unej.id/Lomba-test</a>
+            </div>
+        </div>
     )
 }
 export function UserKompetisiDetailDeskripsi() {
     return (
-        <div>Deskripsi</div>
+        <p className="text-gray-500 whitespace-pre-wrap">
+            Lorem ipsum dolor sit amet consec te tur. Egestas ligula luctus amet odio sa gittis pharetra sagittis. Orci lacus non tortor et ut nunc venenatis sagittis. Adi piscing proin volutpat tristique cras fri ngilla. Fringilla dis auctor maecenas in teger. 
+            Consectetur gravida sem integer ut risus aenean eu. Nibh gravida quis maecenas pharetra ornare tortor vive rra. Nibh dignissim pellentesque aliqu am id mauris risus eget. Turpis lectus in semper volutpat mi.
+        </p>
     )
 }
 
