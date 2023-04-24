@@ -3,24 +3,30 @@ import DummyPoster from '../../assets/dummy-poster.png'
 import PartnerCarousel from "../../components/user/partner-carousel";
 import PartnerCard from "../../components/user/partner-card";
 import { Link } from "react-router-dom";
+import KompetisiCard from "../../components/user/kompetisi-card";
 
 export default function UserHome() {
     const dummyPhoto = 'https://source.unsplash.com/random/?person'
     const dummyKompetisi = [
         {
-            name: 'National Paper Competition HMDEP USU 2022'
+            name: 'National Paper Competition HMDEP USU 2022',
+            img: DummyPoster
         },
         {
-            name: 'National Paper Competition HMDEP USU 2022'
+            name: 'National Paper Competition HMDEP USU 2022',
+            img: DummyPoster
         },
         {
-            name: 'National Paper Competition HMDEP USU 2022'
+            name: 'National Paper Competition HMDEP USU 2022',
+            img: DummyPoster
         },
         {
-            name: 'National Paper Competition HMDEP USU 2022'
+            name: 'National Paper Competition HMDEP USU 2022',
+            img: DummyPoster
         },
         {
-            name: 'National Paper Competition HMDEP USU 2022'
+            name: 'National Paper Competition HMDEP USU 2022',
+            img: DummyPoster
         },
     ]
 
@@ -66,10 +72,7 @@ export default function UserHome() {
                 </div>
                 <div className="grid grid-cols-3 gap-3">
                     {dummyKompetisi && dummyKompetisi.map((kompetisi, index) => (
-                        <Link to={`/kompetisi/${index}/info`} className="rounded-lg bg-white p-4 flex flex-col items-center gap-3 max-w-1/3">
-                            <img src={DummyPoster} alt="" />
-                            <h4 className="font-medium text-sm text-gray-500 text-center">{kompetisi.name}</h4>
-                        </Link>
+                        <KompetisiCard kompetisi={kompetisi} key={index} index={index} />
                     ))}
                 </div>
             </div>
