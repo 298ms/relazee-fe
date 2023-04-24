@@ -1,7 +1,8 @@
 import UserLayout from "../../components/user/layout";
 import DummyPoster from '../../assets/dummy-poster.png'
-import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import KompetisiCard from "../../components/user/kompetisi-card";
 
 export function UserKompetisiDetailInfo() {
     return (
@@ -74,6 +75,29 @@ export default function UserKompetisiDetail() {
         }
     }
 
+    const dummyKompetisi = [
+        {
+            name: 'National Paper Competition HMDEP USU 2022',
+            img: DummyPoster
+        },
+        {
+            name: 'National Paper Competition HMDEP USU 2022',
+            img: DummyPoster
+        },
+        {
+            name: 'National Paper Competition HMDEP USU 2022',
+            img: DummyPoster
+        },
+        {
+            name: 'National Paper Competition HMDEP USU 2022',
+            img: DummyPoster
+        },
+        {
+            name: 'National Paper Competition HMDEP USU 2022',
+            img: DummyPoster
+        },
+    ]
+
     useEffect(() => {
         document.addEventListener('mousedown', closeDetailMenu)
     })
@@ -104,6 +128,17 @@ export default function UserKompetisiDetail() {
                 <div className="flex flex-row items-stretch gap-2">
                     <a href="#" className="bg-relazee-blue rounded-lg p-3 text-white w-full text-center">Daftar Sekarang</a>
                     <a href="#" className="bg-relazee-blue-light rounded-lg text-gray-500 p-3 w-full text-center">Buat Tim</a>
+                </div>
+            </div>
+            <div className="flex flex-col gap-3">
+                <div className="flex flex-row items-center justify-between">
+                    <h2 className="font-medium text-xl">Kompetisi lainnya</h2>
+                    <a href="#" className="text-relazee-blue">Temukan lebih <i className="bi bi-chevron-right"></i></a>
+                </div>
+                <div className="grid grid-cols-3 gap-3">
+                    {dummyKompetisi && dummyKompetisi.map((kompetisi, index) => (
+                        <KompetisiCard kompetisi={kompetisi} key={index} index={index} />
+                    ))}
                 </div>
             </div>
         </UserLayout>
