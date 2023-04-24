@@ -65,8 +65,8 @@ export default function UserHome() {
                     <a href="#" className="text-relazee-blue">Temukan lebih <i className="bi bi-chevron-right"></i></a>
                 </div>
                 <div className="grid grid-cols-3 gap-3">
-                    {dummyKompetisi && dummyKompetisi.map((kompetisi) => (
-                        <Link to="/kompetisi/1" className="rounded-lg bg-white p-4 flex flex-col items-center gap-3 max-w-1/3">
+                    {dummyKompetisi && dummyKompetisi.map((kompetisi, index) => (
+                        <Link to={`/kompetisi/${index}`} className="rounded-lg bg-white p-4 flex flex-col items-center gap-3 max-w-1/3">
                             <img src={DummyPoster} alt="" />
                             <h4 className="font-medium text-sm text-gray-500 text-center">{kompetisi.name}</h4>
                         </Link>
