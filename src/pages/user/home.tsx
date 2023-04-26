@@ -53,7 +53,7 @@ export default function UserHome() {
             <div className="flex flex-col gap-3">
                 <div className="flex flex-row items-center justify-between">
                     <h2 className="font-medium text-xl">Temukan Partner</h2>
-                    <Link to='/more' className="text-relazee-blue">Temukan lebih <i className="bi bi-chevron-right"></i></Link>
+                    <Link to='/more/partner' className="text-relazee-blue">Temukan lebih <i className="bi bi-chevron-right"></i></Link>
                 </div>
                 <div className="bg-white rounded-lg py-3 px-4 flex flex-row items-center justify-between">
                     <p className="text-gray-500">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -68,7 +68,7 @@ export default function UserHome() {
             <div className="flex flex-col gap-3">
                 <div className="flex flex-row items-center justify-between">
                     <h2 className="font-medium text-xl">Kompetisi</h2>
-                    <a href="#" className="text-relazee-blue">Temukan lebih <i className="bi bi-chevron-right"></i></a>
+                    <Link to='/more/kompetisi' className="text-relazee-blue">Temukan lebih <i className="bi bi-chevron-right"></i></Link>
                 </div>
                 <div className="grid grid-cols-3 gap-3">
                     {dummyKompetisi && dummyKompetisi.map((kompetisi, index) => (

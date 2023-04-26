@@ -4,6 +4,7 @@ import UserKompetisiDetail, { UserKompetisiDetailDeskripsi, UserKompetisiDetailI
 import UserPartner from './pages/user/partner'
 import UserKompetisi from './pages/user/kompetisi'
 import UserMore from './pages/user/more'
+import UserPartnerDetail from './pages/user/partner-detail'
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path="info" element={<UserKompetisiDetailInfo />} />
                 <Route path="deskripsi" element={<UserKompetisiDetailDeskripsi />} />
             </Route>
+            <Route path='/partner/:id' element={<UserPartnerDetail />} />
         </Routes>
     )
 }

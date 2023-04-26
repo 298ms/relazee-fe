@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom"
+
 export default function PartnerCard() {
     const dummyPhoto = 'https://source.unsplash.com/random/?person'
 
     return (
-        <div className="rounded-lg bg-white p-4 flex flex-col gap-3">
+        <Link reloadDocument to='/partner/1' className="rounded-lg bg-white p-4 flex flex-col gap-3">
             <div className="flex flex-row items-start gap-3">
                 <div className="bg-center bg-cover w-20 aspect-square rounded-md" style={{ backgroundImage: `url(${dummyPhoto})` }}></div>
                 <div className="flex flex-col gap-2">
@@ -27,6 +29,6 @@ export default function PartnerCard() {
                     Chat Request
                 </button>
             </div>
-        </div>
+        </Link>
     )
 }
