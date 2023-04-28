@@ -6,11 +6,13 @@ import UserKompetisi from './pages/user/kompetisi'
 import UserMore from './pages/user/more'
 import UserPartnerDetail from './pages/user/partner-detail'
 import UserLogin from './pages/user/auth/login'
+import UserRegister from './pages/user/auth/register'
 
 function App() {
     return (
         <Routes>
             <Route path='/login' element={<UserLogin />} />
+            <Route path='/register' element={<UserRegister />} />
             <Route path="/" element={<UserHome />} />
             <Route path="/more" element={<UserMore />}>
                 <Route path='partner' element={<UserPartner />} />
