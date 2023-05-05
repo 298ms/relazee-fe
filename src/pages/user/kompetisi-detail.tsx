@@ -1,6 +1,6 @@
 import UserLayout from "../../components/user/layout";
 import DummyPoster from '../../assets/dummy-poster.png'
-import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import KompetisiCard from "../../components/user/kompetisi-card";
 
@@ -133,7 +133,7 @@ export default function UserKompetisiDetail() {
             <div className="flex flex-col gap-3">
                 <div className="flex flex-row items-center justify-between">
                     <h2 className="font-medium text-xl">Kompetisi lainnya</h2>
-                    <a href="#" className="text-relazee-blue">Temukan lebih <i className="bi bi-chevron-right"></i></a>
+                    <Link to='/more/kompetisi' className="text-relazee-blue">Temukan lebih <i className="bi bi-chevron-right"></i></Link>
                 </div>
                 <div className="grid grid-cols-3 gap-3">
                     {dummyKompetisi && dummyKompetisi.map((kompetisi, index) => (
