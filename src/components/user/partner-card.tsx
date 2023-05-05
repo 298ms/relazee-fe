@@ -20,12 +20,12 @@ export default function PartnerCard() {
                 </div>
             </div>
             <div className="flex flex-row items-stretch gap-2">
-                <button className="w-full rounded-lg border border-gray-500 px-4 py-2 bg-transparent flex flex-row items-center justify-center gap-3">
-                    <i className="bi bi-microsoft-teams text-2xl"></i>
+                <button className="w-full rounded-lg border border-gray-500 px-3 py-1 bg-transparent flex flex-row items-center justify-center gap-3">
+                    <i className="bi bi-microsoft-teams text-lg text-gray-500"></i>
                     Team Invite
                 </button>
-                <button className="w-full rounded-lg border border-gray-500 px-4 py-2 bg-transparent flex flex-row items-center justify-center gap-3">
-                    <i className="bi bi-chat-fill"></i>
+                <button className="w-full rounded-lg border border-gray-500 px-4 bg-transparent flex flex-row items-center justify-center gap-3">
+                    <i className="bi bi-chat-fill text-gray-500"></i>
                     Chat Request
                 </button>
             </div>
