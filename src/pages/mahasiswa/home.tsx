@@ -1,11 +1,11 @@
-import UserLayout from "../../components/user/layout";
+import MahasiswaLayout from "../../components/mahasiswa/layout";
 import DummyPoster from '../../assets/dummy-poster.png'
-import PartnerCarousel from "../../components/user/partner-carousel";
-import PartnerCard from "../../components/user/partner-card";
+import PartnerCarousel from "../../components/mahasiswa/partner-carousel";
+import PartnerCard from "../../components/mahasiswa/partner-card";
 import { Link } from "react-router-dom";
-import KompetisiCard from "../../components/user/kompetisi-card";
+import KompetisiCard from "../../components/mahasiswa/kompetisi-card";
 
-export default function UserHome() {
+export default function MahasiswaHome() {
     const dummyPhoto = 'https://source.unsplash.com/random/?person'
     const dummyKompetisi = [
         {
@@ -31,7 +31,7 @@ export default function UserHome() {
     ]
 
     return (
-        <UserLayout>
+        <MahasiswaLayout>
             <div className='flex flex-row items-stretch text-white gap-4'>
                 <div className='bg-relazee-blue rounded-lg w-1/2 flex flex flex-row items-center justify-between gap-5 p-6'>
                     <i className="bi bi-robot text-3xl"></i>
@@ -76,6 +76,6 @@ export default function UserHome() {
                     ))}
                 </div>
             </div>
-        </UserLayout>
+        </MahasiswaLayout>
     )
 }

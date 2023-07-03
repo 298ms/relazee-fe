@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import Logo from '../../../assets/logo.png'
 
-export default function UserRegister() {
-    const [username, setUsername] = useState('')
+export default function MahasiswaRegister() {
+    const [mahasiswaname, setMahasiswaname] = useState('')
     const [email, setEmail] = useState('')
     const [fullname, setFullname] = useState('')
     const [angkatan, setAngkatan] = useState('')
@@ -32,13 +32,13 @@ export default function UserRegister() {
                         <h1 className='font-bold text-3xl'>Sign Up</h1>
                         <p>Dapatkan manfaat yang luar biasa dari komunitas. Daftarlah sekarang dan rasakan manfaatnya!</p>
                         <div className='flex flex-col gap-1'>
-                            <label htmlFor="" className='text-gray-500 font-medium'>Username</label>
+                            <label htmlFor="" className='text-gray-500 font-medium'>Mahasiswaname</label>
                             <input
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
+                                value={mahasiswaname}
+                                onChange={(e) => setMahasiswaname(e.target.value)}
                                 type="text"
-                                id='username'
-                                placeholder="Buat username unik"
+                                id='mahasiswaname'
+                                placeholder="Buat mahasiswaname unik"
                                 className='rounded-md bg-transparent border px-4 py-2 w-full'
                             />
                         </div>

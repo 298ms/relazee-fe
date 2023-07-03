@@ -28,15 +28,15 @@ function SearchDropdown(props: any) {
     const dummySearch = [
         {
             name: 'Le Minerale',
-            username: 'azer_reza'
+            mahasiswaname: 'azer_reza'
         },
         {
             name: 'Le Minerale',
-            username: 'azer_reza'
+            mahasiswaname: 'azer_reza'
         },
         {
             name: 'Le Minerale',
-            username: 'azer_reza'
+            mahasiswaname: 'azer_reza'
         },
     ]
 
@@ -47,7 +47,7 @@ function SearchDropdown(props: any) {
                     <div className='bg-center bg-cover w-9 aspect-square rounded-full' style={{ backgroundImage: `url(${dummyPhoto})` }}></div>
                     <div className='flex flex-col'>
                         <h4 className='font-medium'>{search.name}</h4>
-                        <span className='text-gray-400 text-sm'>@{search.username}</span>
+                        <span className='text-gray-400 text-sm'>@{search.mahasiswaname}</span>
                     </div>
                 </div>
             ))}
@@ -55,7 +55,7 @@ function SearchDropdown(props: any) {
     )
 }
 
-export default function UserTopbar(props: any) {
+export default function MahasiswaTopbar(props: any) {
     const [showProfileDropdown, setShowProfileDropdown] = useState(false)
     const [showSearchDropdown, setShowSearchDropdown] = useState(false)
 

@@ -1,4 +1,4 @@
-export default function UserRightSidebar(props: any) {
+export default function MahasiswaRightSidebar(props: any) {
     const dummyPhoto = 'https://source.unsplash.com/random/?person'
     const dummyTeam = [
         {

@@ -1,28 +1,28 @@
 import { Route, Routes } from 'react-router-dom'
-import UserHome from './pages/user/home'
-import UserKompetisiDetail, { UserKompetisiDetailDeskripsi, UserKompetisiDetailInfo } from './pages/user/kompetisi-detail'
-import UserPartner from './pages/user/partner'
-import UserKompetisi from './pages/user/kompetisi'
-import UserMore from './pages/user/more'
-import UserPartnerDetail from './pages/user/partner-detail'
-import UserLogin from './pages/user/auth/login'
-import UserRegister from './pages/user/auth/register'
+import MahasiswaHome from './pages/mahasiswa/home'
+import MahasiswaKompetisiDetail, { MahasiswaKompetisiDetailDeskripsi, MahasiswaKompetisiDetailInfo } from './pages/mahasiswa/kompetisi-detail'
+import MahasiswaPartner from './pages/mahasiswa/partner'
+import MahasiswaKompetisi from './pages/mahasiswa/kompetisi'
+import MahasiswaMore from './pages/mahasiswa/more'
+import MahasiswaPartnerDetail from './pages/mahasiswa/partner-detail'
+import MahasiswaLogin from './pages/mahasiswa/auth/login'
+import MahasiswaRegister from './pages/mahasiswa/auth/register'
 
 function App() {
     return (
         <Routes>
-            <Route path='/login' element={<UserLogin />} />
-            <Route path='/register' element={<UserRegister />} />
-            <Route path="/" element={<UserHome />} />
-            <Route path="/more" element={<UserMore />}>
-                <Route path='partner' element={<UserPartner />} />
-                <Route path='kompetisi' element={<UserKompetisi />} />
+            <Route path='/login' element={<MahasiswaLogin />} />
+            <Route path='/register' element={<MahasiswaRegister />} />
+            <Route path="/" element={<MahasiswaHome />} />
+            <Route path="/more" element={<MahasiswaMore />}>
+                <Route path='partner' element={<MahasiswaPartner />} />
+                <Route path='kompetisi' element={<MahasiswaKompetisi />} />
             </Route>
-            <Route path="/kompetisi/:id" element={<UserKompetisiDetail />}>
-                <Route path="info" element={<UserKompetisiDetailInfo />} />
-                <Route path="deskripsi" element={<UserKompetisiDetailDeskripsi />} />
+            <Route path="/kompetisi/:id" element={<MahasiswaKompetisiDetail />}>
+                <Route path="info" element={<MahasiswaKompetisiDetailInfo />} />
+                <Route path="deskripsi" element={<MahasiswaKompetisiDetailDeskripsi />} />
             </Route>
-            <Route path='/partner/:id' element={<UserPartnerDetail />} />
+            <Route path='/partner/:id' element={<MahasiswaPartnerDetail />} />
         </Routes>
     )
 }

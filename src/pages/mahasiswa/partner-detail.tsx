@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
-import UserLayout from "../../components/user/layout";
+import MahasiswaLayout from "../../components/mahasiswa/layout";
 import { useEffect, useRef, useState } from "react";
-import PartnerCarousel from "../../components/user/partner-carousel";
-import PartnerCard from "../../components/user/partner-card";
+import PartnerCarousel from "../../components/mahasiswa/partner-carousel";
+import PartnerCard from "../../components/mahasiswa/partner-card";
 
 function DetailMenu() {
     return (
@@ -23,7 +23,7 @@ function DetailMenu() {
     )
 }
 
-export default function UserPartnerDetail() {
+export default function MahasiswaPartnerDetail() {
     const dummyPhoto = 'https://source.unsplash.com/random/?person'
 
     const navigate = useNavigate()
@@ -43,7 +43,7 @@ export default function UserPartnerDetail() {
     })
 
     return (
-        <UserLayout>
+        <MahasiswaLayout>
             <div className="bg-white rounded-lg p-6 flex flex-col gap-7">
                 <div className="flex flex-row items-center justify-between relative">
                     <button onClick={() => navigate(-1)} className="bg-relazee-black w-7 flex items-center justify-center aspect-square text-white rounded-full"><i className="bi bi-arrow-left-short"></i></button>
@@ -101,6 +101,6 @@ export default function UserPartnerDetail() {
                     <PartnerCard />
                 </PartnerCarousel>
             </div>
-        </UserLayout>
+        </MahasiswaLayout>
     )
 }

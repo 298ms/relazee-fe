@@ -1,10 +1,10 @@
-import UserLayout from "../../components/user/layout";
+import MahasiswaLayout from "../../components/mahasiswa/layout";
 import DummyPoster from '../../assets/dummy-poster.png'
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import KompetisiCard from "../../components/user/kompetisi-card";
+import KompetisiCard from "../../components/mahasiswa/kompetisi-card";
 
-export function UserKompetisiDetailInfo() {
+export function MahasiswaKompetisiDetailInfo() {
     return (
         <div className="flex flex-col gap-4">
             <div className="flex flex-col">
@@ -34,7 +34,7 @@ export function UserKompetisiDetailInfo() {
         </div>
     )
 }
-export function UserKompetisiDetailDeskripsi() {
+export function MahasiswaKompetisiDetailDeskripsi() {
     return (
         <p className="text-gray-500 whitespace-pre-wrap">
             Lorem ipsum dolor sit amet consec te tur. Egestas ligula luctus amet odio sa gittis pharetra sagittis. Orci lacus non tortor et ut nunc venenatis sagittis. Adi piscing proin volutpat tristique cras fri ngilla. Fringilla dis auctor maecenas in teger.
@@ -62,7 +62,7 @@ function DetailMenu() {
     )
 }
 
-export default function UserKompetisiDetail() {
+export default function MahasiswaKompetisiDetail() {
     const navigate = useNavigate()
 
     const [showDetailMenu, setShowDetailMenu] = useState(false)
@@ -103,7 +103,7 @@ export default function UserKompetisiDetail() {
     })
 
     return (
-        <UserLayout>
+        <MahasiswaLayout>
             <div className="bg-white rounded-lg p-6 flex flex-col gap-5">
                 <div className="flex flex-row items-center justify-between relative">
                     <button onClick={() => navigate(-1)} className="bg-relazee-black w-7 flex items-center justify-center aspect-square text-white rounded-full"><i className="bi bi-arrow-left-short"></i></button>
@@ -141,6 +141,6 @@ export default function UserKompetisiDetail() {
                     ))}
                 </div>
             </div>
-        </UserLayout>
+        </MahasiswaLayout>
     )
 }

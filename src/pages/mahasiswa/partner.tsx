@@ -22,7 +22,7 @@ function PartnerCard(props: any) {
     )
 }
 
-export default function UserPartner() {
+export default function MahasiswaPartner() {
     const [filter, setFilter] = useState('semua')
     const dummyPartner = [
         {

@@ -1,8 +1,8 @@
-import KompetisiCard from "../../components/user/kompetisi-card";
+import KompetisiCard from "../../components/mahasiswa/kompetisi-card";
 import DummyPoster from '../../assets/dummy-poster.png'
 import { useState } from "react";
 
-export default function UserKompetisi() {
+export default function MahasiswaKompetisi() {
     const dummyKompetisi = [
         {
             name: 'National Paper Competition HMDEP USU 2022',

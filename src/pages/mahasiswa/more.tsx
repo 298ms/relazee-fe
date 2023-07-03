@@ -1,9 +1,9 @@
 import { NavLink, Outlet } from 'react-router-dom'
-import UserLayout from '../../components/user/layout'
+import MahasiswaLayout from '../../components/mahasiswa/layout'
 
-export default function UserMore() {
+export default function MahasiswaMore() {
     return (
-        <UserLayout>
+        <MahasiswaLayout>
             <div className="flex flex-col gap-5 w-full">
                 <div className="flex flex-row text-center">
                     <NavLink replace to="partner" className={({ isActive, isPending }) => `w-full py-2 font-medium text-gray-500 ${isActive ? "border-b-2 border-relazee-blue" : "border-b border-gray-300"}`
@@ -15,6 +15,6 @@ export default function UserMore() {
                     <Outlet />
                 </div>
             </div>
-        </UserLayout>
+        </MahasiswaLayout>
     )
 }
