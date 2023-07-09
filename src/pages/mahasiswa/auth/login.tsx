@@ -20,11 +20,11 @@ export default function MahasiswaLogin() {
                         <h1 className='font-bold text-3xl'>Sign In</h1>
                         <p>Dapatkan manfaat yang luar biasa dari komunitas. Daftarlah sekarang dan rasakan manfaatnya!</p>
                         <div className='flex flex-col gap-1'>
-                            <label htmlFor="" className='text-gray-500 font-medium'>Email atau Mahasiswaname</label>
+                            <label htmlFor="" className='text-gray-500 font-medium'>Email atau Username</label>
                             <input
                                 value={mahasiswaEmail}
                                 onChange={(e) => setMahasiswaEmail(e.target.value)}
-                                type="text"
+                                type="email"
                                 id='email'
                                 placeholder="Masukkan email atau mahasiswaname"
                                 className='rounded-md bg-transparent border px-4 py-2 w-full'
