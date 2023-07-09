@@ -74,8 +74,11 @@ export default function MahasiswaSmartbot() {
         e.preventDefault()
     }
 
+    const [displayForm, setDisplayForm] = useState(true)
+
     return (
         <div>
+            {displayForm == true ? <SearchForm setDisplayForm={setDisplayForm} /> : <></>}
             <MahasiswaLayout>
                 <div className="bg-white rounded-lg p-6 flex flex-col gap-5">
                     <div className="flex flex-row items-center justify-between relative">
@@ -94,8 +97,6 @@ export default function MahasiswaSmartbot() {
                         </div>
                     </div>
                     <div className="flex flex-row items-stretch gap-2">
-                        {/* <a href="#" className="bg-relazee-blue rounded-lg p-3 text-white w-full text-center">Daftar Sekarang</a>
-                        <a href="#" className="bg-relazee-blue-light rounded-lg text-gray-500 p-3 w-full text-center">Buat Tim</a> */}
                         <div className='sticky left-0 bottom-20 md:bottom-5 w-full flex flex-col items-center'>
                             <form onSubmit={handleSubmit} className="relative md:w-full">
                                 {/* <div className="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i className="bi bi-question-circle-fill text-relazee-blue"></i></div> */}
@@ -115,9 +116,37 @@ export default function MahasiswaSmartbot() {
     )
 }
 
-function SearchForm() {
-    const [CV, setCV] = useState('')
-    const [portofolio, setPortofolio] = useState('')
+const ToggleSwitch = () => {
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleToggle = () => {
+        setIsChecked(!isChecked);
+    };
+
+    return (
+        <div className="flex items-center gap-2 mx-auto">
+            <label
+                className="inline-block pl-[0.15rem] hover:cursor-pointer font-bold text-gray-500"
+                htmlFor="flexSwitchChecked"
+            >Random</label>
+            <input
+                type="checkbox"
+                checked={isChecked}
+                onChange={handleToggle}
+                role="switch"
+                id="flexSwitchChecked"
+                className="mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-neutral-100 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-neutral-600 dark:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]"
+            />
+        </div>
+    );
+};
+
+function SearchForm({ setDisplayForm }: any) {
+    const [angkatan, setAngkatan] = useState<Number>(0)
+
+    const angkatanHandleChange = (val: Number) => {
+        setAngkatan(val)
+    }
 
     return (
         <div className='h-screen overflow-y-hidden'>
@@ -127,44 +156,35 @@ function SearchForm() {
                 </div>
             </div>
             <div className='flex flex-col h-full container mx-auto mt-5'>
-                <div className='flex justify-end'>
-                    <Link to={'/'} className='inline-block rounded-lg border border-gray-300 px-4 py-1'>Lewati</Link>
+                <div className='flex justify-start'>
+                    <Link to={'/'} className='inline-block rounded-lg border border-gray-300 px-4 py-1'>Kembali</Link>
                 </div>
                 <div className='flex flex-col items-center w-full'>
-                    <div className='flex flex-col max-w-[500px] gap-3'>
-                        <h1 className='font-bold text-3xl text-center'>Portofolio</h1>
-                        <p className='text-center'>Dapatkan manfaat yang luar biasa dari komunitas. Daftarlah sekarang dan rasakan manfaatnya!</p>
+                    <div className='flex flex-col w-[400px] gap-3'>
+                        <h1 className='font-bold text-3xl text-center'>Smart Bot</h1>
+                        <p className='text-center'>Dapatkan manfaat yang luar biasa dari komunitas</p>
+                        <ToggleSwitch />
+                        <div className='flex flex-col gap-1'>
+                            <label htmlFor="" className='text-gray-500 font-medium'>Fakultas</label>
+                            <TagsInput />
+                        </div>
+                        <div className='flex flex-col gap-1'>
+                            <label htmlFor="" className='text-gray-500 font-medium'>Angkatan</label>
+                            <div className="relative w-full">
+                                <select id="style" defaultValue={angkatan as number} onChange={(e) => angkatanHandleChange} className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+                                    <option value={0}>Pilih angkatan</option>
+                                    <option value={1}>2019</option>
+                                    <option value={2}>2020</option>
+                                    <option value={3}>2021</option>
+                                    <option value={4}>2022</option>
+                                </select>
+                            </div>
+                        </div>
                         <div className='flex flex-col gap-1'>
                             <label htmlFor="" className='text-gray-500 font-medium'>Skills</label>
                             <TagsInput />
                         </div>
-                        <div className='flex flex-col gap-1'>
-                            <label htmlFor="" className='text-gray-500 font-medium'>Pencapaian</label>
-                            <TagsInput />
-                        </div>
-                        <div className='flex flex-col gap-1'>
-                            <label htmlFor="" className='text-gray-500 font-medium'>Link CV</label>
-                            <input
-                                value={CV}
-                                onChange={(e) => setCV(e.target.value)}
-                                type="text"
-                                id='cv'
-                                placeholder="https://"
-                                className='rounded-md bg-transparent border px-4 py-2 w-full'
-                            />
-                        </div>
-                        <div className='flex flex-col gap-1'>
-                            <label htmlFor="" className='text-gray-500 font-medium'>Link Portofolio</label>
-                            <input
-                                value={portofolio}
-                                onChange={(e) => setPortofolio(e.target.value)}
-                                type="text"
-                                id='portofolio'
-                                placeholder="https://"
-                                className='rounded-md bg-transparent border px-4 py-2 w-full'
-                            />
-                        </div>
-                        <button className='bg-relazee-blue rounded-lg py-2 text-white' onClick={() => { }}>Selanjutnya</button>
+                        <button className='bg-relazee-blue rounded-lg py-2 text-white' onClick={() => { setDisplayForm(false) }}>Mulai</button>
                     </div>
                 </div>
             </div>
