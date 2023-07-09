@@ -117,6 +117,7 @@ export default function MahasiswaSmartbot() {
 }
 
 const ToggleSwitch = () => {
+    // https://tailwind-elements.com/docs/standard/forms/switch/
     const [isChecked, setIsChecked] = useState(false);
 
     const handleToggle = () => {
