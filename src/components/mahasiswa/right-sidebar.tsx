@@ -1,6 +1,6 @@
 export default function MahasiswaRightSidebar(props: any) {
     const dummyPhoto = 'https://source.unsplash.com/random/?person'
-    const dummyTeam = [
+    const filledProjects = [
         {
             name: 'Salah Jurusan',
             count: 99
@@ -18,7 +18,7 @@ export default function MahasiswaRightSidebar(props: any) {
             count: 99
         }
     ]
-    const dummyHistory = [
+    const filledBookmarks = [
         {
             name: "Syah Reza Pahlevi",
             isOnline: true
@@ -32,43 +32,63 @@ export default function MahasiswaRightSidebar(props: any) {
             isOnline: true
         }
     ]
+    const emptyProjects: any[] = []
+    const emptyBookmarks: any[] = []
+    const projects = emptyProjects
+    const bookmarks = emptyBookmarks
 
     return (
         <div className={`bg-white rounded-lg py-8 flex flex-col w-1/5 px-6 ml-auto gap-7 ${props.className}`}>
             <div className='flex flex-col items-stretch gap-5'>
                 <div className='flex flex-row items-center justify-between'>
-                    <span className='text-lg font-medium'>Tim</span>
-                    <a href="#"><i className="bi bi-person-fill-add text-relazee-blue text-2xl"></i></a>
+                    <span className='text-lg font-medium'>Project</span>
+                    <a href="#"><i className="bi bi-window-plus text-relazee-blue text-2xl"></i></a>
                 </div>
                 <div className='space-y-4'>
-                    {dummyTeam && dummyTeam.map((team) => (
+                    {projects.length > 0 ? projects.map((project) => (
                         <div className='flex flex-row items-center justify-between'>
                             <div className='flex flex-row items-center gap-2'>
                                 <div className="bg-center bg-cover rounded-full w-6 aspect-square" style={{ backgroundImage: `url(${dummyPhoto})` }}></div>
-                                <span className='text-sm text-gray-500'>{team.name}</span>
+                                <span className='text-sm text-gray-500'>{project.name}</span>
                             </div>
-                            <span className='text-relazee-blue'>{team.count}</span>
+                            <span className='text-relazee-blue'>{project.count}</span>
                         </div>
-                    ))}
+                    )) :
+                        <div className="flex flex-col gap-2 text-center items-center text-sm h-[150px] justify-center">
+                            <p className="text-gray-500">Anda belum tergabung dalam Project</p>
+                            <button className="text-relazee-blue border rounded-md border-relazee-blue px-4 py-1">Buat Project</button>
+                        </div>
+                    }
                 </div>
-                <span className='text-relazee-blue text-center text-sm'>Tampilkan lebih banyak<i className="bi bi-chevron-down ml-2"></i></span>
+                {
+                    projects.length > 0 ?
+                        <span className='text-relazee-blue text-center text-sm'>Tampilkan lebih banyak<i className="bi bi-chevron-down ml-2"></i></span> : <></>
+                }
             </div>
             <div className='flex flex-col items-stretch gap-5'>
                 <div className='flex flex-row items-center justify-between'>
-                    <span className='text-lg font-medium'>Riwayat</span>
+                    <span className='text-lg font-medium'>Bookmark</span>
                 </div>
                 <div className='space-y-4'>
-                    {dummyHistory && dummyHistory.map((history) => (
+                    {bookmarks.length > 0 ? bookmarks.map((bookmark) => (
                         <div className='flex flex-row items-center justify-between'>
                             <div className='flex flex-row items-center gap-2'>
                                 <div className="bg-center bg-cover rounded-full w-6 aspect-square" style={{ backgroundImage: `url(${dummyPhoto})` }}></div>
-                                <span className='text-sm text-gray-500'>{history.name}</span>
+                                <span className='text-sm text-gray-500'>{bookmark.name}</span>
                             </div>
-                            <div className={`rounded-full w-2 aspect-square ${history.isOnline ? 'bg-green-500' : 'bg-gray-400'}`}></div>
+                            <div className={`rounded-full w-2 aspect-square ${bookmark.isOnline ? 'bg-green-500' : 'bg-gray-400'}`}></div>
                         </div>
-                    ))}
+                    )) :
+                        <div className="flex flex-col gap-2 text-center items-center text-sm h-[150px] justify-center">
+                            <p className="text-gray-500">Tidak terdapat riwayat pencarian</p>
+                            <button className="text-relazee-blue border rounded-md border-relazee-blue px-4 py-1">Eksplor</button>
+                        </div>
+                    }
                 </div>
-                <span className='text-relazee-blue text-center text-sm'>Tampilkan lebih banyak<i className="bi bi-chevron-down ml-2"></i></span>
+                {
+                    bookmarks.length > 0 ?
+                        <span className='text-relazee-blue text-center text-sm'>Tampilkan lebih banyak<i className="bi bi-chevron-down ml-2"></i></span> : <></>
+                }
             </div>
         </div>
     )
