@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Logo from '../../../assets/logo.png'
+import { useNavigate } from 'react-router-dom'
 
 export default function MahasiswaRegister() {
     const [username, setUsername] = useState('')
@@ -80,6 +81,7 @@ function Account({ username, usernameHandleChange, email, emailHandleChange, set
 }
 
 function Biodata({ fullname, fullnameHandleChange, angkatan, angkatanHandleChange, fakultas, fakultasHandleChange }: any) {
+    const navigate  = useNavigate()
     return (
         <>
             <div className='flex flex-col gap-1'>
@@ -117,7 +119,7 @@ function Biodata({ fullname, fullnameHandleChange, angkatan, angkatanHandleChang
                     </select>
                 </div>
             </div>
-            <button className='bg-relazee-blue rounded-lg py-2 text-white' onClick={() => { }}>Selanjutnya</button>
+            <button className='bg-relazee-blue rounded-lg py-2 text-white' onClick={() => { navigate('/onboarding') }}>Selanjutnya</button>
         </>
     )
 }
