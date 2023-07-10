@@ -9,7 +9,7 @@ export default function MahasiswaProject() {
             description: 'Revisi BAB 3 bagian metode',
             time: '7 hari yang lalu',
             status: true,
-            color: 'green'
+            color: 'border-blue-400'
         },
         {
             team: 'Salah Jurusan',
@@ -17,7 +17,7 @@ export default function MahasiswaProject() {
             description: 'Revisi BAB 3 bagian metode',
             time: '7 hari yang lalu',
             status: true,
-            color: 'blue'
+            color: 'border-green-400'
         },
         {
             team: 'Sebelumnya',
@@ -25,7 +25,7 @@ export default function MahasiswaProject() {
             description: 'Revisi BAB 3 bagian metode',
             time: '7 hari yang lalu',
             status: false,
-            color: 'red'
+            color: 'border-red-400'
         },
     ]
 
@@ -33,17 +33,17 @@ export default function MahasiswaProject() {
         {
             team: '298 ms',
             lomba: 'National Paper Competition HMDEP USU 2022',
-            color: 'blue'
+            color: 'bg-blue-400'
         },
         {
-            team: '298 ms',
+            team: 'Salah Jurusan',
             lomba: 'National Paper Competition HMDEP USU 2022',
-            color: 'blue'
+            color: 'bg-green-400'
         },
         {
-            team: '298 ms',
+            team: 'Trinfinity',
             lomba: 'National Paper Competition HMDEP USU 2022',
-            color: 'blue'
+            color: 'bg-red-400'
         },
     ]
 
@@ -72,7 +72,7 @@ export default function MahasiswaProject() {
                     </thead>
                     <tbody>
                         {(tasks && tasks.length > 0) && tasks.map((task, i) => (
-                            <tr className={`bg-white rounded-lg border-l-4 border-${task.color}-400`}>
+                            <tr className={`bg-white rounded-lg border-l-8 ${task.color}`}>
                                 <td className="py-4">{task.team}</td>
                                 <td>{task.event}</td>
                                 <td>
@@ -98,7 +98,7 @@ export default function MahasiswaProject() {
                 </div>
                 <div className="flex flex-row flex-wrap items-stretch gap-3">
                     {(projects && projects.length > 0) && projects.map((project, i) => (
-                        <Link to={'/projects/1'} className="rounded-lg p-4 bg-blue-400 text-white flex flex-col gap-2 w-[180px]">
+                        <Link to={'/projects/1'} className={`rounded-lg p-4 ${project.color} text-white flex flex-col gap-2 w-[180px]`}>
                             <h3 className="text-lg font-medium">{project.team}</h3>
                             <p className="text-sm">{project.lomba}</p>
                         </Link>

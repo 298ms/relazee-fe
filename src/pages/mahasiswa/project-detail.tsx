@@ -88,7 +88,7 @@ export default function MahasiswaProjectDetail() {
                         </thead>
                         <tbody>
                             {(tasks && tasks.length > 0) && tasks.map((task, i) => (
-                                <tr className={`bg-white rounded-lg border-l-4 border-${task.color}-400`}>
+                                <tr className={`bg-white rounded-lg border-l-4 border-blue-400`}>
                                     {/* <td className="py-4">{task.team}</td>
                                 <td>{task.event}</td> */}
                                     <td className="py-4">
