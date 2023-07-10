@@ -29,7 +29,7 @@ export default function MahasiswaProjectDetail() {
         },
     ]
 
-    const [showTaskModal, setShowTaskModal] = useState(true)
+    const [showTaskModal, setShowTaskModal] = useState(false)
 
     return (
         <div>
@@ -97,7 +97,7 @@ export default function MahasiswaProjectDetail() {
                                     <td>{task.description}</td>
                                     <td>{task.time}</td>
                                     <td>
-                                        <button className="text-relazee-blue border rounded-md border-relazee-blue px-4 py-1">Lihat</button>
+                                        <button onClick={() => setShowTaskModal(true)} className="text-relazee-blue border rounded-md border-relazee-blue px-4 py-1">Lihat</button>
                                     </td>
                                     <td>
                                         <i className={`bi bi-check-square-fill ${task.status ? 'text-green-500' : 'text-gray-300'}`}></i>
@@ -108,20 +108,20 @@ export default function MahasiswaProjectDetail() {
                     </table>
                 </div>
             </MahasiswaLayout>
-            {(showTaskModal == true) && <TaskModal />}
+            {(showTaskModal == true) && <TaskModal setShowTaskModal={setShowTaskModal} />}
         </div>
     )
 }
 
-function TaskModal() {
+function TaskModal({setShowTaskModal}: any) {
     return (
         <div className="h-screen w-full absolute top-0 left-0 z-20 bg-black/[.5] flex flex-col items-center justify-center">
-            <div className="w-2/5 bg-white rounded-lg p-4 flex flex-col gap-5">
+            <div className="w-2/5 bg-white rounded-lg p-5 flex flex-col gap-5">
                 <div className="flex flex-row justify-between items-center">
                     <h2 className="font-medium text-lg">Revisi BAB 3 bagian metode</h2>
-                    <button><i className="bi bi-x-square text-red-500 text-xl"></i></button>
+                    <button onClick={() => setShowTaskModal(false)}><i className="bi bi-x-square text-red-500 text-xl"></i></button>
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-5">
                     <div className="flex flex-row items-start gap-4">
                         <i className="bi bi-blockquote-left text-xl"></i>
                         <div className="flex flex-col gap-2">
@@ -133,6 +133,14 @@ function TaskModal() {
                         <i className="bi bi-file-earmark-text text-xl"></i>
                         <div className="flex flex-col gap-2">
                             <h3 className="font-medium">File</h3>
+                            <div></div>
+                            <input type="file" name="file" id="file" />
+                        </div>
+                    </div>
+                    <div className="flex flex-row items-start gap-4">
+                        <i className="bi bi-chat-left-text text-xl"></i>
+                        <div className="flex flex-col gap-2">
+                            <h3 className="font-medium">Feedback</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet elit eu mauris faucibus, a pharetra justo tincidunt. Praesent bibendum nisl ut vehicula laoreet. Donec mauris quam, auctor a blandit id, tempor gravida arcu.</p>
                         </div>
                     </div>
