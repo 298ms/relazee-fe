@@ -73,9 +73,9 @@ export default function MahasiswaProjectDetail() {
                 <table className="table text-center">
                     <thead>
                         <tr>
-                            <th className="py-3">Team</th>
-                            <th>Event</th>
-                            <th>Document</th>
+                            {/* <th className="py-3">Team</th>
+                            <th>Event</th> */}
+                            <th className="py-3">Document</th>
                             <th>Description</th>
                             <th>Time</th>
                             <th>Feedback</th>
@@ -85,9 +85,9 @@ export default function MahasiswaProjectDetail() {
                     <tbody>
                         {(tasks && tasks.length > 0) && tasks.map((task, i) => (
                             <tr className={`bg-white rounded-lg border-l-4 border-${task.color}-400`}>
-                                <td className="py-4">{task.team}</td>
-                                <td>{task.event}</td>
-                                <td>
+                                {/* <td className="py-4">{task.team}</td>
+                                <td>{task.event}</td> */}
+                                <td className="py-4">
                                     <a href="#"><i className="bi bi-file-earmark-text text-relazee-blue text-lg"></i></a>
                                 </td>
                                 <td>{task.description}</td>
