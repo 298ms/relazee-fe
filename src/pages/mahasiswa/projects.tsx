@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import MahasiswaLayout from "../../components/mahasiswa/layout";
 
 export default function MahasiswaProject() {
@@ -97,10 +98,10 @@ export default function MahasiswaProject() {
                 </div>
                 <div className="flex flex-row flex-wrap items-stretch gap-3">
                     {(projects && projects.length > 0) && projects.map((project, i) => (
-                        <div className="rounded-lg p-4 bg-blue-400 text-white flex flex-col gap-2 w-[180px]">
+                        <Link to={'/projects/1'} className="rounded-lg p-4 bg-blue-400 text-white flex flex-col gap-2 w-[180px]">
                             <h3 className="text-lg font-medium">{project.team}</h3>
                             <p className="text-sm">{project.lomba}</p>
-                        </div>
+                        </Link>
                     ))}
                     <div className="rounded-lg p-4 bg-white flex flex-col justify-center items-center w-[180px]">
                         <i className="bi bi-plus-square"></i>

@@ -10,6 +10,7 @@ import MahasiswaRegister from './pages/mahasiswa/auth/register'
 import MahasiswaOnboarding from './pages/mahasiswa/onboarding'
 import MahasiswaSmartbot from './pages/mahasiswa/smartbot'
 import MahasiswaProject from './pages/mahasiswa/projects'
+import MahasiswaProjectDetail from './pages/mahasiswa/project-detail'
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
             <Route path='/onboarding' element={<MahasiswaOnboarding />} />
             <Route path='/smartbot' element={<MahasiswaSmartbot />} />
             <Route path='/projects' element={<MahasiswaProject />} />
+            <Route path='/projects/:id' element={<MahasiswaProjectDetail />} />
             <Route path="/" element={<MahasiswaHome />} />
             <Route path="/more" element={<MahasiswaMore />}>
                 <Route path='partner' element={<MahasiswaPartner />} />
