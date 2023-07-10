@@ -126,7 +126,9 @@ function TaskModal({ setShowTaskModal }: any) {
                         <i className="bi bi-blockquote-left text-xl"></i>
                         <div className="flex flex-col gap-2">
                             <h3 className="font-medium">Deskripsi</h3>
-                            <textarea className="bg-gray-200 rounded-lg p-3 focus:outline-relazee-blue" name="deskripsi" id="deskripsi" cols={50} rows={3}></textarea>
+                            <textarea className="bg-gray-200 rounded-lg p-3 focus:outline-relazee-blue" name="deskripsi" id="deskripsi" cols={50} rows={3}>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet elit eu mauris faucibus, a pharetra justo tincidunt. Praesent bibendum nisl ut vehicula laoreet. Donec mauris quam, auctor a blandit id, tempor gravida arcu.
+                            </textarea>
                         </div>
                     </div>
                     <div className="flex flex-row items-start gap-4">
