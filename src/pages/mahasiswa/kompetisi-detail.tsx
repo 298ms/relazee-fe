@@ -112,8 +112,8 @@ export default function MahasiswaKompetisiDetail() {
                     {showDetailMenu && <div className="absolute top-[100%] right-0" ref={detailMenuRef}><DetailMenu /></div>}
                 </div>
                 <div className="flex flex-row items-strecth gap-6">
-                    <img src={DummyPoster} alt="" className="w-full rounded-md" />
-                    <div className="flex flex-col gap-5 w-full">
+                    <img src={DummyPoster} alt="" className="w-1/2 rounded-md" />
+                    <div className="flex flex-col gap-5 w-1/2">
                         <div className="flex flex-row text-center">
                             <NavLink replace to="info" className={({ isActive, isPending }) => `w-full py-2 ${isActive ? "border-b-2 border-relazee-blue" : "border-b border-relazee-gray"}`
                             }>Informasi Penting</NavLink>

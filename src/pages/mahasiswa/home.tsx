@@ -1,5 +1,6 @@
 import MahasiswaLayout from "../../components/mahasiswa/layout";
 import DummyPoster from '../../assets/dummy-poster.png'
+import DummyPoster2 from '../../assets/dummy-poster2.png'
 import PartnerCarousel from "../../components/mahasiswa/partner-carousel";
 import PartnerCard from "../../components/mahasiswa/partner-card";
 import { Link, NavLink } from "react-router-dom";
@@ -14,7 +15,7 @@ export default function MahasiswaHome() {
         },
         {
             name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
+            img: DummyPoster2
         },
         {
             name: 'National Paper Competition HMDEP USU 2022',
@@ -22,7 +23,7 @@ export default function MahasiswaHome() {
         },
         {
             name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
+            img: DummyPoster2
         },
         {
             name: 'National Paper Competition HMDEP USU 2022',
