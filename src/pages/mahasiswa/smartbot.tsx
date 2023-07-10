@@ -8,7 +8,7 @@ import MahasiswaLayout from '../../components/mahasiswa/layout'
 
 function User1(props: { content: string }) {
     return (
-        <div className='w-full py-1'>
+        <div className='w-full py-2'>
             <div className='bg-relazee-blue text-white p-4 rounded-3xl rounded-tr-none max-w-[400px] ml-auto'>
                 <p>{props.content}</p>
             </div>
@@ -18,7 +18,7 @@ function User1(props: { content: string }) {
 
 function User2(props: { content: string }) {
     return (
-        <div className='w-full py-1'>
+        <div className='w-full py-2'>
             <div className='bg-relazee-gray text-gray-500 p-4 rounded-3xl rounded-tl-none max-w-[400px]'>
                 <p>{props.content}</p>
             </div>
@@ -42,29 +42,17 @@ export default function MahasiswaSmartbot() {
 
     const dummyChats: Chats[] = [
         {
-            role: ChatRole.USER1,
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui distinctio adipisci iusto quidem saepe mollitia nulla fugiat exercitationem, totam dolores asperiores et aperiam quae consequatur sunt consectetur sed fuga sequi labore voluptatum earum perferendis?'
+            role: ChatRole.USER2,
+            content: 'Selamat datang di bot  Relazee! Semoga bot ini dapat membantu kamu untuk menemukan partner.'
         },
         {
             role: ChatRole.USER2,
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui distinctio adipisci iusto quidem saepe mollitia nulla fugiat exercitationem, totam dolores asperiores et aperiam quae consequatur sunt consectetur sed fuga sequi labore voluptatum earum perferendis?'
+            content: 'Anda akan segera dihubungkan dalam 10 detik'
         },
         {
             role: ChatRole.USER1,
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui distinctio adipisci iusto quidem saepe mollitia nulla fugiat exercitationem, totam dolores asperiores et aperiam quae consequatur sunt consectetur sed fuga sequi labore voluptatum earum perferendis?'
+            content: 'Halo...'
         },
-        {
-            role: ChatRole.USER2,
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui distinctio adipisci iusto quidem saepe mollitia nulla fugiat exercitationem, totam dolores asperiores et aperiam quae consequatur sunt consectetur sed fuga sequi labore voluptatum earum perferendis?'
-        },
-        {
-            role: ChatRole.USER1,
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui distinctio adipisci iusto quidem saepe mollitia nulla fugiat exercitationem, totam dolores asperiores et aperiam quae consequatur sunt consectetur sed fuga sequi labore voluptatum earum perferendis?'
-        },
-        {
-            role: ChatRole.USER2,
-            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui distinctio adipisci iusto quidem saepe mollitia nulla fugiat exercitationem, totam dolores asperiores et aperiam quae consequatur sunt consectetur sed fuga sequi labore voluptatum earum perferendis?'
-        }
     ]
 
     const [chats, setChats] = useState<Chats[]>(dummyChats)
@@ -83,7 +71,10 @@ export default function MahasiswaSmartbot() {
                 <div className="bg-white rounded-lg p-6 flex flex-col gap-5">
                     <div className="flex flex-row items-center justify-between relative">
                         <button onClick={() => navigate(-1)} className="bg-relazee-black w-7 flex items-center justify-center aspect-square text-white rounded-full"><i className="bi bi-arrow-left-short"></i></button>
-                        <h2 className="text-gray-500 font-medium text-lg text-center mx-auto">Bot</h2>
+                        <div className='mx-auto flex flex-row items-center gap-2'>
+                            <i className="bi bi-robot text-2xl text-gray-500"></i>
+                            <h2 className="text-gray-500 font-medium text-lg">Bot</h2>
+                        </div>
                         {/* <button onClick={() => setShowDetailMenu(!showDetailMenu)}><i className="bi bi-three-dots-vertical"></i></button> */}
                         {/* {showDetailMenu && <div className="absolute top-[100%] right-0" ref={detailMenuRef}><DetailMenu /></div>} */}
                     </div>
@@ -100,7 +91,7 @@ export default function MahasiswaSmartbot() {
                         <div className='sticky left-0 bottom-20 md:bottom-5 w-full flex flex-col items-center'>
                             <form onSubmit={handleSubmit} className="relative md:w-full">
                                 {/* <div className="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i className="bi bi-question-circle-fill text-relazee-blue"></i></div> */}
-                                <button type='button' onClick={() => {}} className="flex absolute inset-y-0 left-0 items-center pl-5 cursor-pointer">
+                                <button type='button' onClick={() => { }} className="flex absolute inset-y-0 left-0 items-center pl-5 cursor-pointer">
                                     <i className="bi bi-emoji-smile text-relazee-blue"></i>
                                 </button>
                                 <input value={input} onChange={(e) => setInput(e.target.value)} type="text" id="simple-search" className="shadow-lg bg-white text-relazee-blue border border-relazee-blue text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full px-14 md:px-12 p-2.5 placeholder-gray-500" placeholder="Type your message..." />
