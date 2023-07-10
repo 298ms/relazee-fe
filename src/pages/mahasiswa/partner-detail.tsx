@@ -42,6 +42,38 @@ export default function MahasiswaPartnerDetail() {
         document.addEventListener('mousedown', closeDetailMenu)
     })
 
+    const dummyPartners = [
+        {
+            nama: 'Afiqur Rahman',
+            fakultas: 'Fasilkom',
+            skills: [
+                'Backend Developer',
+                'Devops Engineer'
+            ],
+            foto: 'https://source.unsplash.com/random/?person'
+        },
+        {
+            nama: 'Syah Reza Pahlevi',
+            fakultas: 'Fasilkom',
+            skills: [
+                'Business Analyst',
+                'UI/UX Design',
+                'Product Design'
+            ],
+            foto: 'https://source.unsplash.com/random/?person'
+        },
+        {
+            nama: 'Syah Reza Pahlevi',
+            fakultas: 'Fasilkom',
+            skills: [
+                'Business Analyst',
+                'UI/UX Design',
+                'Product Design'
+            ],
+            foto: 'https://source.unsplash.com/random/?person'
+        },
+    ]
+
     return (
         <MahasiswaLayout>
             <div className="bg-white rounded-lg p-6 flex flex-col gap-7">
@@ -96,9 +128,9 @@ export default function MahasiswaPartnerDetail() {
                     <Link to='/more/partner' className="text-relazee-blue">Temukan lebih <i className="bi bi-chevron-right"></i></Link>
                 </div>
                 <PartnerCarousel>
-                    <PartnerCard />
-                    <PartnerCard />
-                    <PartnerCard />
+                    {(dummyPartners && dummyPartners.length > 0) && dummyPartners.map((partner, i) => (
+                        <PartnerCard data={partner} />
+                    ))}
                 </PartnerCarousel>
             </div>
         </MahasiswaLayout>
