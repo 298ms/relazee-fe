@@ -18,7 +18,7 @@ function ProfileDropdown({ ...props }) {
                 <a href="#">Profile Saya</a>
                 <a href="#">Pengaturan Akun</a>
                 <a href="#">Preferensi</a>
-                <a href="#">Sign Out</a>
+                <Link to={'/login'}>Sign Out</Link>
             </div>
         </div>
     )
