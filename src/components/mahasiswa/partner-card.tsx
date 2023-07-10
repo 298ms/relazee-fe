@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom"
 
-export default function PartnerCard() {
+export default function PartnerCard({ data }: any) {
     const dummyPhoto = 'https://source.unsplash.com/random/?person'
 
     return (
-        <Link reloadDocument to='/partner/1' className="rounded-lg bg-white p-4 flex flex-col gap-3">
+        <Link reloadDocument to='/partner/1' className="rounded-lg bg-white p-4 flex flex-col gap-3 justify-between h-full">
             <div className="flex flex-row items-start gap-3">
-                <div className="bg-center bg-cover w-20 aspect-square rounded-md" style={{ backgroundImage: `url(${dummyPhoto})` }}></div>
+                <div className="bg-center bg-cover w-20 aspect-square rounded-md" style={{ backgroundImage: `url(${data.foto})` }}></div>
                 <div className="flex flex-col gap-2">
                     <div className="flex flex-col">
-                        <h4 className="font-medium">Afiqur Rahman</h4>
-                        <span>Fasilkom 20</span>
+                        <h4 className="font-medium">{data.nama}</h4>
+                        <span>{data.fakultas}</span>
                     </div>
                     <div className="flex flex-row items-stretch gap-1 flex-wrap">
-                        <span className="bg-relazee-gray text-gray-500 text-xs rounded-lg py-1 px-2">Frontend Developer</span>
-                        <span className="bg-relazee-gray text-gray-500 text-xs rounded-lg py-1 px-2">Frontend Developer</span>
-                        <span className="bg-relazee-gray text-gray-500 text-xs rounded-lg py-1 px-2">Frontend Developer</span>
+                        {data.skills && data.skills.map((skill: any, i: Number) => (
+                            <span className="bg-relazee-gray text-gray-500 text-xs rounded-lg py-1 px-2">{skill}</span>
+                        ))}
                     </div>
                 </div>
             </div>

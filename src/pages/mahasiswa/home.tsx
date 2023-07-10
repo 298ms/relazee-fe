@@ -30,6 +30,38 @@ export default function MahasiswaHome() {
         },
     ]
 
+    const dummyPartners = [
+        {
+            nama: 'Afiqur Rahman',
+            fakultas: 'Fasilkom',
+            skills: [
+                'Backend Developer',
+                'Devops Engineer'
+            ],
+            foto: 'https://source.unsplash.com/random/?person'
+        },
+        {
+            nama: 'Syah Reza Pahlevi',
+            fakultas: 'Fasilkom',
+            skills: [
+                'Business Analyst',
+                'UI/UX Design',
+                'Product Design'
+            ],
+            foto: 'https://source.unsplash.com/random/?person'
+        },
+        {
+            nama: 'Syah Reza Pahlevi',
+            fakultas: 'Fasilkom',
+            skills: [
+                'Business Analyst',
+                'UI/UX Design',
+                'Product Design'
+            ],
+            foto: 'https://source.unsplash.com/random/?person'
+        },
+    ]
+
     return (
         <MahasiswaLayout>
             <div className='flex flex-row items-stretch text-white gap-4'>
@@ -60,9 +92,9 @@ export default function MahasiswaHome() {
                     <a href="#" className="text-relazee-blue font-medium">FAQ</a>
                 </div>
                 <PartnerCarousel>
-                    <PartnerCard />
-                    <PartnerCard />
-                    <PartnerCard />
+                    {(dummyPartners && dummyPartners.length > 0) && dummyPartners.map((partner, i) => (
+                        <PartnerCard data={partner} />
+                    ))}
                 </PartnerCarousel>
             </div>
             <div className="flex flex-col gap-3">

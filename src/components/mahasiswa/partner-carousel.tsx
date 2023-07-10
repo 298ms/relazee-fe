@@ -61,7 +61,7 @@ export default function PartnerCarousel({ children }:any) {
             responsive={responsive}
             customRightArrow={<CustomRightArrow />}
             customLeftArrow={<CustomLeftArrow />}
-            sliderClass='space-x-2'
+            sliderClass='gap-3 items-stretch'
         >
             {children}
         </Carousel>
