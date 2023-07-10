@@ -1,4 +1,4 @@
-import React, { FormEvent, useRef, useState } from 'react'
+import React, { FormEvent, useEffect, useRef, useState } from 'react'
 import Logo from '../../assets/logo.png'
 import { Link, useNavigate } from 'react-router-dom'
 import TagsInput from '../../components/shared/tags-input'
@@ -60,7 +60,22 @@ export default function MahasiswaSmartbot() {
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault()
+        setChats([...chats, {
+            role: ChatRole.USER1,
+            content: input
+        }])
+        setInput('')
     }
+
+    useEffect(() => {
+        // const chatsContainer = useRef<HTMLDivElement>(null)
+        // chatsContainer.current!.scrollTop = chatsContainer.current!.scrollHeight
+        const chatsContainer = document.getElementById('chats_container')
+        if (chatsContainer != null) {
+            chatsContainer.scrollTop = chatsContainer.scrollHeight
+        }
+
+    }, [chats])
 
     const [displayForm, setDisplayForm] = useState(true)
 
