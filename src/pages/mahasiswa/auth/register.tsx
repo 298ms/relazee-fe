@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Logo from '../../../assets/logo.png'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function MahasiswaRegister() {
     const [username, setUsername] = useState('')
@@ -41,6 +41,7 @@ export default function MahasiswaRegister() {
                         <p>Dapatkan manfaat yang luar biasa dari komunitas. Daftarlah sekarang dan rasakan manfaatnya!</p>
                         {form == 1 ? <Account username={username} usernameHandleChange={usernameHandleChange} email={email} emailHandleChange={emailHandleChange} setForm={setForm} />
                             : <Biodata fullname={fullname} fullnameHandleChange={fullnameHandleChange} angkatan={angkatan} angkatanHandleChange={angkatanHandleChange} fakultas={fakultas} fakultasHandleChange={fakultasHandleChange} />}
+                        <span className='text-center text-gray-500 font-medium'>Already have an account? <Link to={'/login'} className='text-relazee-blue'>Sign In here</Link></span>
                     </div>
                 </div>
             </div>
@@ -81,7 +82,7 @@ function Account({ username, usernameHandleChange, email, emailHandleChange, set
 }
 
 function Biodata({ fullname, fullnameHandleChange, angkatan, angkatanHandleChange, fakultas, fakultasHandleChange }: any) {
-    const navigate  = useNavigate()
+    const navigate = useNavigate()
     return (
         <>
             <div className='flex flex-col gap-1'>
