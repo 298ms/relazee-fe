@@ -100,10 +100,10 @@ export default function MahasiswaSmartbot() {
                         <div className='sticky left-0 bottom-20 md:bottom-5 w-full flex flex-col items-center'>
                             <form onSubmit={handleSubmit} className="relative md:w-full">
                                 {/* <div className="flex absolute inset-y-0 left-0 items-center pl-5 pointer-events-none"><i className="bi bi-question-circle-fill text-relazee-blue"></i></div> */}
-                                <button type='button' onClick={() => setChats([])} className="flex md:hidden absolute inset-y-0 left-0 items-center pl-5 cursor-pointer">
-                                    <i className="bi bi-trash-fill text-relazee-blue"></i>
+                                <button type='button' onClick={() => {}} className="flex absolute inset-y-0 left-0 items-center pl-5 cursor-pointer">
+                                    <i className="bi bi-emoji-smile text-relazee-blue"></i>
                                 </button>
-                                <input value={input} onChange={(e) => setInput(e.target.value)} type="text" id="simple-search" className="shadow-lg bg-white text-relazee-blue border border-relazee-blue text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full px-14 md:px-5 p-2.5 placeholder-gray-500" placeholder="Type your message..." />
+                                <input value={input} onChange={(e) => setInput(e.target.value)} type="text" id="simple-search" className="shadow-lg bg-white text-relazee-blue border border-relazee-blue text-sm rounded-lg focus:ring-relazee-blue focus:border-relazee-blue block w-full px-14 md:px-12 p-2.5 placeholder-gray-500" placeholder="Type your message..." />
                                 <button type='submit' className="flex absolute inset-y-0 right-0 items-center pr-5 cursor-pointer">
                                     <i className="bi bi-send-fill text-relazee-blue"></i>
                                 </button>

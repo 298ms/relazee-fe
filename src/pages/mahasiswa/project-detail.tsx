@@ -113,7 +113,7 @@ export default function MahasiswaProjectDetail() {
     )
 }
 
-function TaskModal({setShowTaskModal}: any) {
+function TaskModal({ setShowTaskModal }: any) {
     return (
         <div className="h-screen w-full absolute top-0 left-0 z-20 bg-black/[.5] flex flex-col items-center justify-center">
             <div className="w-2/5 bg-white rounded-lg p-5 flex flex-col gap-5">
@@ -126,7 +126,7 @@ function TaskModal({setShowTaskModal}: any) {
                         <i className="bi bi-blockquote-left text-xl"></i>
                         <div className="flex flex-col gap-2">
                             <h3 className="font-medium">Deskripsi</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet elit eu mauris faucibus, a pharetra justo tincidunt. Praesent bibendum nisl ut vehicula laoreet. Donec mauris quam, auctor a blandit id, tempor gravida arcu.</p>
+                            <textarea className="bg-gray-200 rounded-lg p-3 focus:outline-relazee-blue" name="deskripsi" id="deskripsi" cols={50} rows={3}></textarea>
                         </div>
                     </div>
                     <div className="flex flex-row items-start gap-4">

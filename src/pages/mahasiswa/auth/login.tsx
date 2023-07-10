@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import Logo from '../../../assets/logo.png'
+import { useNavigate } from 'react-router-dom'
 
 export default function MahasiswaLogin() {
     const [mahasiswaEmail, setMahasiswaEmail] = useState('')
     const [password, setPassword] = useState('')
     const [showPassword, setShowPassword] = useState(false)
+
+    const navigate = useNavigate()
 
     return (
         <div className='h-screen overflow-y-hidden'>
@@ -50,7 +53,7 @@ export default function MahasiswaLogin() {
                             </div>
                         </div>
                         <a href="#" className='text-gray-500 self-end'>Lupa Password?</a>
-                        <button className='bg-relazee-blue rounded-lg py-2 text-white'>Masuk</button>
+                        <button onClick={() => navigate('/')} className='bg-relazee-blue rounded-lg py-2 text-white'>Masuk</button>
                     </div>
                 </div>
             </div>
