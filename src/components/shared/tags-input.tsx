@@ -20,7 +20,7 @@ function TagsInput(){
             { tags.map((tag, index) => (
                 <div className="bg-relazee-gray rounded-md px-2" key={index}>
                     <span className="text">{tag}</span>
-                    <span className="ml-2" onClick={() => removeTag(index)}>&times;</span>
+                    <span className="ml-2 cursor-pointer" onClick={() => removeTag(index)}>&times;</span>
                 </div>
             )) }
             <input onKeyDown={handleKeyDown} type="text" className="focus:outline-none w-full" placeholder="Type your skill and press enter to add" />
