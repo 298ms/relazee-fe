@@ -120,7 +120,7 @@ function TaskModal({ setShowTaskModal }: any) {
                         <i className="bi bi-chat-left-text text-xl"></i>
                         <div className="flex flex-col gap-2">
                             <h3 className="font-medium">Feedback</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet elit eu mauris faucibus, a pharetra justo tincidunt. Praesent bibendum nisl ut vehicula laoreet. Donec mauris quam, auctor a blandit id, tempor gravida arcu.</p>
+                            <p>Progress sudah bagus, revisi dikerjakan secepatnya ya, biar besok bisa langsung kita bahas di meet</p>
                         </div>
                     </div>
                 </div>
