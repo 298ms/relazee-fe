@@ -2,6 +2,10 @@ import SS from '../assets/ss.png'
 import Pricing from '../assets/pricing.png'
 import { Link } from 'react-router-dom'
 import Logo from '../assets/logo.png'
+import Mentoring from '../assets/landingpage/solutions/mentoring.png'
+import Connect from '../assets/landingpage/solutions/connect.png'
+import Event from '../assets/landingpage/solutions/event.png'
+import Project from '../assets/landingpage/solutions/project.png'
 
 export default function Home() {
     return (
@@ -30,10 +34,10 @@ export default function Home() {
                     <div className="flex flex-col items-center lg:items-start px-10 lg:px-28 gap-5">
                         <h1 className="font-bold text-5xl text-center lg:text-start">Learn how to make and publish sites with Figma</h1>
                         <div className="flex flex-col lg:flex-row gap-4 items-stretch">
-                            <Link to={'/register'} className="bg-relazee-blue text-white rounded-lg px-4 py-2">
+                            <a href='#pricing' className="bg-relazee-blue text-white rounded-lg px-4 py-2">
                                 {/* <i className="bi bi-search"></i> */}
                                 <span>Try it now!</span>
-                            </Link>
+                            </a>
                             {/* <a href="#"
                                 className="border border-custom-brown font-regular text-custom-brown py-3 px-5 rounded-lg space-x-2">
                                 <i className="bi bi-play-circle"></i>
@@ -47,7 +51,7 @@ export default function Home() {
                 </div>
             </header>
             <section id="data" className='container mx-auto flex flex-col items-center py-10 text-center px-20 gap-7'>
-                <h2 className='font-bold text-3xl'>Our clients</h2>
+                <h2 className='font-bold text-3xl'>Statistik Pengguna</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ullam distinctio obcaecati. Alias neque autem aliquam.</p>
                 <div className='flex flex-row items-stretch justify-between gap-5'>
                     <div className='bg-white rounded-lg shadow shadow-2xl flex flex-col w-[200px] py-5'>
@@ -65,26 +69,26 @@ export default function Home() {
                 </div>
             </section>
             <section id="solution" className='container mx-auto flex flex-col items-center py-10 text-center px-20 gap-7'>
-                <h2 className='font-bold text-3xl'>Solutions</h2>
+                <h2 className='font-bold text-3xl'>Solusi</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ullam distinctio obcaecati. Alias neque autem aliquam.</p>
                 <div className='flex flex-row items-stretch justify-between gap-5'>
-                    <div className='bg-relazee-gray rounded-lg flex flex-col w-1/4 py-5 px-5 gap-2'>
-                        <i className="bi bi-columns text-3xl"></i>
+                    <div className='bg-relazee-gray rounded-lg flex flex-col w-1/4 py-10 px-6 gap-3 items-center'>
+                        <img src={Mentoring} width={50} alt="" />
                         <h3 className='font-bold text-2xl'>Mentoring</h3>
                         <p>Relazee menyediakan fitur penemuan pembimbing yang memudahkan mahasiswa dalam mencari dan berkomunikasi dengan dosen pembimbing yang tepat.</p>
                     </div>
-                    <div className='bg-relazee-gray rounded-lg flex flex-col w-1/4 py-5 px-5 gap-2'>
-                        <i className="bi bi-columns text-3xl"></i>
+                    <div className='bg-relazee-gray rounded-lg flex flex-col w-1/4 py-10 px-6 gap-3 items-center'>
+                        <img src={Connect} width={50} alt="" />
                         <h3 className='font-bold text-2xl'>Connect</h3>
                         <p>Relazee menyediakan platform yang memudahkan mahasiswa dalam mencari rekan yang sesuai dengan minat, keahlian, dan tujuan mereka.</p>
                     </div>
-                    <div className='bg-relazee-gray rounded-lg flex flex-col w-1/4 py-5 px-5 gap-2'>
-                        <i className="bi bi-columns text-3xl"></i>
+                    <div className='bg-relazee-gray rounded-lg flex flex-col w-1/4 py-10 px-6 gap-3 items-center'>
+                        <img src={Event} width={50} alt="" />
                         <h3 className='font-bold text-2xl'>Event Information</h3>
                         <p>Relazee menyediakan platform yang memudahkan mahasiswa dalam Menemukan dan mengikuti berbagai acara, kompetisi, dan perlombaan</p>
                     </div>
-                    <div className='bg-relazee-gray rounded-lg flex flex-col w-1/4 py-5 px-5 gap-2'>
-                        <i className="bi bi-columns text-3xl"></i>
+                    <div className='bg-relazee-gray rounded-lg flex flex-col w-1/4 py-10 px-6 gap-3 items-center'>
+                        <img src={Project} width={50} alt="" />
                         <h3 className='font-bold text-2xl'>Project Management</h3>
                         <p>Relazee menyediakan fitur manajemen kegiatan yang memungkinkan mahasiswa mengelola proyek, jadwal, dan tugas dengan lebih efisien. </p>
                     </div>
@@ -96,17 +100,17 @@ export default function Home() {
                 </div>
                 <div className='flex flex-row flex-wrap w-2/3'>
                     <div className='flex flex-col w-1/2 gap-2'>
-                        <i className="bi bi-columns text-3xl"></i>
+                        <i className="bi bi-person text-3xl text-relazee-blue"></i>
                         <h3 className='font-bold text-2xl'>Mahasiswa</h3>
                         <p>Lorem ipsum dolor sit amet, aeque tation vis ei.</p>
                     </div>
                     <div className='flex flex-col w-1/2 gap-2'>
-                        <i className="bi bi-columns text-3xl"></i>
+                        <i className="bi bi-briefcase text-3xl text-relazee-blue"></i>
                         <h3 className='font-bold text-2xl'>Dosen</h3>
                         <p>Lorem ipsum dolor sit amet, aeque tation vis ei.</p>
                     </div>
-                    <div className='flex flex-col w-1/2 gap-2'>
-                        <i className="bi bi-columns text-3xl"></i>
+                    <div className='flex flex-col w-1/2 gap-2 mt-10'>
+                        <i className="bi bi-people text-3xl text-relazee-blue"></i>
                         <h3 className='font-bold text-2xl'>Ormawa</h3>
                         <p>Lorem ipsum dolor sit amet, aeque tation vis ei.</p>
                     </div>
@@ -125,7 +129,7 @@ export default function Home() {
                         <h2 className='font-bold text-3xl'>Ready for the power? Start your free trial today</h2>
                     </div>
                     <div className='w-1/2 flex flex-col items-center'>
-                        <Link to={'/register'} className='bg-relazee-blue text-white rounded-lg px-4 py-2'>Try it now!</Link>
+                        <Link to={'/register'} className='bg-relazee-blue text-white rounded-lg px-4 py-2'>Sign Up now!</Link>
                     </div>
                 </div>
             </section>
@@ -138,10 +142,7 @@ export default function Home() {
                                 <span className="font-bold">Dekoor</span> */}
                                 <img src={Logo} alt="" />
                         </div>
-                        <p className="">Dekoor is a furniture company created to fulfill the needs of family with
-                            aesthetic feeling in their
-                            furniture. Always pay attention to details and give clear communication for the customers. Priority
-                            of our design is comfortability.</p>
+                        <p className="">Relazee is a lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita officia dolorum aperiam culpa reiciendis, ipsa illo harum eius incidunt vel pariatur odit at sunt asperiores atque quidem doloribus doloremque magni!</p>
                         <span className=" hidden lg:inline-block">©Copyright 2022 Relazee</span>
                     </div>
                     <div className="w-full lg:w-1/2 flex flex-row flex-wrap justify-center lg:justify-end gap-10">
