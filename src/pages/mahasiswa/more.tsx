@@ -10,6 +10,8 @@ export default function MahasiswaMore() {
                     }>Partner</NavLink>
                     <NavLink replace to="kompetisi" className={({ isActive, isPending }) => `w-full py-2 font-medium text-gray-500 ${isActive ? "border-b-2 border-relazee-blue" : "border-b border-gray-300"}`
                     }>Kompetisi</NavLink>
+                    <NavLink replace to="dosen" className={({ isActive, isPending }) => `w-full py-2 font-medium text-gray-500 ${isActive ? "border-b-2 border-relazee-blue" : "border-b border-gray-300"}`
+                    }>Dosen</NavLink>
                 </div>
                 <div>
                     <Outlet />

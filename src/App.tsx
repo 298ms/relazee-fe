@@ -12,6 +12,7 @@ import MahasiswaSmartbot from './pages/mahasiswa/smartbot'
 import MahasiswaProject from './pages/mahasiswa/projects'
 import MahasiswaProjectDetail from './pages/mahasiswa/project-detail'
 import Home from './pages/home'
+import MahasiswaDosen from './pages/mahasiswa/dosen'
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/more" element={<MahasiswaMore />}>
                 <Route path='partner' element={<MahasiswaPartner />} />
                 <Route path='kompetisi' element={<MahasiswaKompetisi />} />
+                <Route path='dosen' element={<MahasiswaDosen />} />
             </Route>
             <Route path="/kompetisi/:id" element={<MahasiswaKompetisiDetail />}>
                 <Route path="info" element={<MahasiswaKompetisiDetailInfo />} />
