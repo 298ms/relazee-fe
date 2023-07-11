@@ -32,11 +32,11 @@ export default function Home() {
             <header className="container mx-auto flex flex-row items-center h-[85vh]">
                 <div className='w-1/2 flex flex-col items-center justify-center'>
                     <div className="flex flex-col items-center lg:items-start px-10 lg:px-28 gap-5">
-                        <h1 className="font-bold text-5xl text-center lg:text-start">Learn how to make and publish sites with Figma</h1>
+                        <h1 className="font-bold text-4xl text-center lg:text-start">Jelajahi beragam kompetisi dan temukan partnermu di Relazee</h1>
                         <div className="flex flex-col lg:flex-row gap-4 items-stretch">
                             <a href='#pricing' className="bg-relazee-blue text-white rounded-lg px-4 py-2">
                                 {/* <i className="bi bi-search"></i> */}
-                                <span>Try it now!</span>
+                                <span>Coba sekarang!</span>
                             </a>
                             {/* <a href="#"
                                 className="border border-custom-brown font-regular text-custom-brown py-3 px-5 rounded-lg space-x-2">
@@ -52,7 +52,7 @@ export default function Home() {
             </header>
             <section id="data" className='container mx-auto flex flex-col items-center py-20 text-center px-20 gap-7'>
                 <h2 className='font-bold text-3xl'>Statistik Pengguna</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ullam distinctio obcaecati. Alias neque autem aliquam.</p>
+                <p>Ratusan mahasiswa, puluhan dosen, dan puluhan universitas telah bergabung di Relazee. Sekarang giliranmu!</p>
                 <div className='flex flex-row items-stretch justify-between gap-5'>
                     <div className='bg-white rounded-lg shadow shadow-2xl flex flex-col w-[200px] py-5'>
                         <span className='text-3xl text-relazee-blue font-bold'>652</span>
@@ -70,7 +70,7 @@ export default function Home() {
             </section>
             <section id="solution" className='container mx-auto flex flex-col items-center py-20 text-center px-20 gap-7'>
                 <h2 className='font-bold text-3xl'>Solusi</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ullam distinctio obcaecati. Alias neque autem aliquam.</p>
+                <p>Beragam solusi untuk membantumu mencapai ambisimu</p>
                 <div className='flex flex-row items-stretch justify-between gap-5'>
                     <div className='bg-relazee-gray rounded-lg flex flex-col w-1/4 py-10 px-6 gap-3 items-center'>
                         <img src={Mentoring} width={50} alt="" />
@@ -118,7 +118,7 @@ export default function Home() {
             </section>
             <section id="pricing" className='container mx-auto flex flex-col items-center py-20 px-20 gap-5'>
                 <h2 className='font-bold text-3xl'>Pricing</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ullam distinctio obcaecati. Alias neque autem aliquam.</p>
+                <p>Kami menawarkan beberapa pilihan tingkatan harga sesuai kebutuhan dengan harga yang terjangkau</p>
                 <div>
                     <img src={Pricing} alt="" width={1000} />
                 </div>
