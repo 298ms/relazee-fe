@@ -6,19 +6,19 @@ const dummyPhoto = 'https://source.unsplash.com/random/?person'
 
 function ProfileDropdown({ ...props }) {
     return (
-        <div className='bg-white rounded-lg p-6 flex flex-col gap-3 shadow-lg' {...props}>
-            <div className='flex flex-row gap-3 items-center justify-between'>
+        <div className='bg-white rounded-lg pt-6 flex flex-col gap-3 shadow-lg' {...props}>
+            <div className='flex flex-row gap-3 items-center justify-between px-6'>
                 <div className='bg-center bg-cover w-9 aspect-square rounded-full' style={{ backgroundImage: `url(${dummyPhoto})` }}></div>
                 <div className='flex flex-col'>
                     <h4 className='font-medium'>Le Minerale</h4>
                     <span className='text-gray-400 text-sm'>@azer_reza</span>
                 </div>
             </div>
-            <div className='flex flex-col gap-3'>
-                <a href="#">Profile Saya</a>
-                <a href="#">Pengaturan Akun</a>
-                <a href="#">Preferensi</a>
-                <Link to={'/login'}>Sign Out</Link>
+            <div className='flex flex-col'>
+                <a href="#" className='px-6 py-3 hover:bg-relazee-blue-light'>Profile Saya</a>
+                <a href="#" className='px-6 py-3 hover:bg-relazee-blue-light'>Pengaturan Akun</a>
+                <a href="#" className='px-6 py-3 hover:bg-relazee-blue-light'>Preferensi</a>
+                <Link to={'/login'} className='px-6 py-3 hover:bg-red-500 hover:text-white rounded-b-lg'>Sign Out</Link>
             </div>
         </div>
     )
