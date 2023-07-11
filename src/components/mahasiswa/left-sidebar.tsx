@@ -11,7 +11,7 @@ export default function MahasiswaLeftSidebar(props: any) {
                 <a href="#" className="text-gray-500 text-sm">View Profile</a>
             </div>
             <div className="flex flex-col items-start gap-5 px-14">
-                <NavLink className="flex flex-row items-center gap-3" to={'/'} children={({ isActive }) => (
+                <NavLink className="flex flex-row items-center gap-3" to={'/home'} children={({ isActive }) => (
                     <>
                         <div className={`${isActive ? 'bg-relazee-blue' : 'bg-gray-400'} text-white text-sm rounded-full w-7 aspect-square flex items-center justify-center`}><i className="bi bi-house-door"></i></div>
                         <span className={`${isActive ? 'text-relazee-blue' : 'text-gray-400'}`}>Beranda</span>
