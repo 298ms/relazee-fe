@@ -102,17 +102,17 @@ export default function Home() {
                     <div className='flex flex-col w-1/2 gap-2'>
                         <i className="bi bi-person text-3xl text-relazee-blue"></i>
                         <h3 className='font-bold text-2xl'>Mahasiswa</h3>
-                        <p>Lorem ipsum dolor sit amet, aeque tation vis ei.</p>
+                        <p>Mencari partner, informasi lomba, pembimbing, dan mengelola proyek</p>
                     </div>
                     <div className='flex flex-col w-1/2 gap-2'>
                         <i className="bi bi-briefcase text-3xl text-relazee-blue"></i>
                         <h3 className='font-bold text-2xl'>Dosen</h3>
-                        <p>Lorem ipsum dolor sit amet, aeque tation vis ei.</p>
+                        <p>Mencari informasi lomba, membimbing mahasiswa, dan mengelola proyek</p>
                     </div>
                     <div className='flex flex-col w-1/2 gap-2 mt-10'>
                         <i className="bi bi-people text-3xl text-relazee-blue"></i>
                         <h3 className='font-bold text-2xl'>Ormawa</h3>
-                        <p>Lorem ipsum dolor sit amet, aeque tation vis ei.</p>
+                        <p>Mengelola event</p>
                     </div>
                 </div>
             </section>
@@ -120,7 +120,7 @@ export default function Home() {
                 <h2 className='font-bold text-3xl'>Pricing</h2>
                 <p>Kami menawarkan beberapa pilihan tingkatan harga sesuai kebutuhan dengan harga yang terjangkau</p>
                 <div>
-                    <img src={Pricing} alt="" width={1000} />
+                    <img src={Pricing} alt="" width={700} />
                 </div>
             </section>
             <section id="cta" className='py-20 px-40 bg-relazee-blue-light'>
