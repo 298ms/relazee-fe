@@ -28,12 +28,12 @@ export function MahasiswaKompetisiDetailInfo() {
             <div className="flex flex-col">
                 <h3 className="text-gray-500 text-xs font-light">Kategori</h3>
                 <div className="flex flex-row flex-wrap gap-2">
-                    <span className="bg-relazee-gray rounded-lg px-2">Karya Tulis Ilmiah</span>
-                    <span className="bg-relazee-gray rounded-lg px-2">Programming</span>
-                    <span className="bg-relazee-gray rounded-lg px-2">Cyber Security</span>
-                    <span className="bg-relazee-gray rounded-lg px-2">Bisnis TIK</span>
-                    <span className="bg-relazee-gray rounded-lg px-2">Kota Cerdas</span>
-                    <span className="bg-relazee-gray rounded-lg px-2">Animasi</span>
+                    <span className="bg-relazee-gray text-gray-500 text-xs rounded-lg py-1 px-2">Karya Tulis Ilmiah</span>
+                    <span className="bg-relazee-gray text-gray-500 text-xs rounded-lg py-1 px-2">Programming</span>
+                    <span className="bg-relazee-gray text-gray-500 text-xs rounded-lg py-1 px-2">Cyber Security</span>
+                    <span className="bg-relazee-gray text-gray-500 text-xs rounded-lg py-1 px-2">Bisnis TIK</span>
+                    <span className="bg-relazee-gray text-gray-500 text-xs rounded-lg py-1 px-2">Kota Cerdas</span>
+                    <span className="bg-relazee-gray text-gray-500 text-xs rounded-lg py-1 px-2">Animasi</span>
                 </div>
             </div>
             <div className="flex flex-col">
