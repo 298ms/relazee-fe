@@ -82,7 +82,7 @@ export default function MahasiswaTopbar(props: any) {
             </div>}
             {showSearchDropdown && <div className='bg-black/50 absolute top-[100%] left-0 h-screen w-full'></div>}
             <div className="container mx-auto flex flex-row justify-between items-center">
-                <Link to="/"><img src={Logo} alt="" /></Link>
+                <Link to="/home"><img src={Logo} alt="" /></Link>
                 <div className='w-72 relative'>
                     <input type="text" placeholder="Pencarian" className='rounded-md bg-relazee-gray px-3 py-1 w-full' onFocus={() => setShowSearchDropdown(true)} />
                     {showSearchDropdown && <div className='absolute top-10 right-0 left-0' ref={searchDropdownRef}>
