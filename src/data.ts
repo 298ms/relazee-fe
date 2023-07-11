@@ -74,7 +74,7 @@ export const dummyTasks = [
         team: 'Salah Jurusan',
         event: 'PIMNAS',
         description: 'Revisi BAB 3 bagian metode',
-        time: '7 hari yang lalu',
+        time: '07/11/2023',
         status: true,
         color: 'border-green-400'
     },
@@ -82,7 +82,7 @@ export const dummyTasks = [
         team: 'Sebelumnya',
         event: 'Gemastik',
         description: 'Revisi BAB 3 bagian metode',
-        time: '7 hari yang lalu',
+        time: 'Kemarin',
         status: false,
         color: 'border-red-400'
     },
