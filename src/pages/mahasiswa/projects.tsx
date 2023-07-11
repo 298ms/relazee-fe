@@ -1,51 +1,12 @@
 import { Link } from "react-router-dom";
 import MahasiswaLayout from "../../components/mahasiswa/layout";
 
-export default function MahasiswaProject() {
-    const tasks = [
-        {
-            team: '298 ms',
-            event: 'Gemastik',
-            description: 'Revisi BAB 3 bagian metode',
-            time: '7 hari yang lalu',
-            status: true,
-            color: 'border-blue-400'
-        },
-        {
-            team: 'Salah Jurusan',
-            event: 'PIMNAS',
-            description: 'Revisi BAB 3 bagian metode',
-            time: '7 hari yang lalu',
-            status: true,
-            color: 'border-green-400'
-        },
-        {
-            team: 'Sebelumnya',
-            event: 'Gemastik',
-            description: 'Revisi BAB 3 bagian metode',
-            time: '7 hari yang lalu',
-            status: false,
-            color: 'border-red-400'
-        },
-    ]
+import { dummyTasks, dummyProjects } from "../../data";
 
-    const projects = [
-        {
-            team: '298 ms',
-            lomba: 'National Paper Competition HMDEP USU 2022',
-            color: 'bg-blue-400'
-        },
-        {
-            team: 'Salah Jurusan',
-            lomba: 'National Paper Competition HMDEP USU 2022',
-            color: 'bg-green-400'
-        },
-        {
-            team: 'Trinfinity',
-            lomba: 'National Paper Competition HMDEP USU 2022',
-            color: 'bg-red-400'
-        },
-    ]
+export default function MahasiswaProject() {
+    const tasks = dummyTasks
+
+    const projects = dummyProjects
 
     return (
         <MahasiswaLayout showRightSidebar={false}>

@@ -1,31 +1,9 @@
 import KompetisiCard from "../../components/mahasiswa/kompetisi-card";
-import DummyPoster from '../../assets/dummy-poster.png'
 import { useState } from "react";
 
-export default function MahasiswaKompetisi() {
-    const dummyKompetisi = [
-        {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
-        },
-        {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
-        },
-        {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
-        },
-        {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
-        },
-        {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
-        },
-    ]
+import { dummyKompetisi } from "../../data";
 
+export default function MahasiswaKompetisi() {
     const [filter, setFilter] = useState('semua')
 
     return (

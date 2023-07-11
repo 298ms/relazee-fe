@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import PartnerCarousel from "../../components/mahasiswa/partner-carousel";
 import PartnerCard from "../../components/mahasiswa/partner-card";
 
+import { dummyPartners } from "../../data";
+
 function DetailMenu() {
     return (
         <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col gap-3">
@@ -41,38 +43,6 @@ export default function MahasiswaPartnerDetail() {
     useEffect(() => {
         document.addEventListener('mousedown', closeDetailMenu)
     })
-
-    const dummyPartners = [
-        {
-            nama: 'Afiqur Rahman',
-            fakultas: 'Fasilkom',
-            skills: [
-                'Backend Developer',
-                'Devops Engineer'
-            ],
-            foto: 'https://source.unsplash.com/random/?person'
-        },
-        {
-            nama: 'Syah Reza Pahlevi',
-            fakultas: 'Fasilkom',
-            skills: [
-                'Business Analyst',
-                'UI/UX Design',
-                'Product Design'
-            ],
-            foto: 'https://source.unsplash.com/random/?person'
-        },
-        {
-            nama: 'Syah Reza Pahlevi',
-            fakultas: 'Fasilkom',
-            skills: [
-                'Business Analyst',
-                'UI/UX Design',
-                'Product Design'
-            ],
-            foto: 'https://source.unsplash.com/random/?person'
-        },
-    ]
 
     return (
         <MahasiswaLayout>

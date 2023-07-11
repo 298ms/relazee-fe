@@ -4,6 +4,8 @@ import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import KompetisiCard from "../../components/mahasiswa/kompetisi-card";
 
+import { dummyKompetisi } from "../../data";
+
 export function MahasiswaKompetisiDetailInfo() {
     return (
         <div className="flex flex-col gap-4">
@@ -74,29 +76,6 @@ export default function MahasiswaKompetisiDetail() {
             setShowDetailMenu(false)
         }
     }
-
-    const dummyKompetisi = [
-        {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
-        },
-        {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
-        },
-        {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
-        },
-        {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
-        },
-        {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
-        },
-    ]
 
     useEffect(() => {
         document.addEventListener('mousedown', closeDetailMenu)

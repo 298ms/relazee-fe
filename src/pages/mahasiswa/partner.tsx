@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
+import { dummyPartners } from "../../data"
+
 function PartnerCard({ data }: any) {
     const dummyPhoto = 'https://source.unsplash.com/random/?person'
 
@@ -25,37 +27,6 @@ function PartnerCard({ data }: any) {
 
 export default function MahasiswaPartner() {
     const [filter, setFilter] = useState('semua')
-    const dummyPartners = [
-        {
-            nama: 'Afiqur Rahman',
-            fakultas: 'Fasilkom',
-            skills: [
-                'Backend Developer',
-                'Devops Engineer'
-            ],
-            foto: 'https://source.unsplash.com/random/?person'
-        },
-        {
-            nama: 'Syah Reza Pahlevi',
-            fakultas: 'Fasilkom',
-            skills: [
-                'Business Analyst',
-                'UI/UX Design',
-                'Product Design'
-            ],
-            foto: 'https://source.unsplash.com/random/?person'
-        },
-        {
-            nama: 'Syah Reza Pahlevi',
-            fakultas: 'Fasilkom',
-            skills: [
-                'Business Analyst',
-                'UI/UX Design',
-                'Product Design'
-            ],
-            foto: 'https://source.unsplash.com/random/?person'
-        },
-    ]
 
     return (
         <div className="flex flex-col gap-3">

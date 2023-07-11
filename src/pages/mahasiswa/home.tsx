@@ -1,73 +1,12 @@
 import MahasiswaLayout from "../../components/mahasiswa/layout";
 import PartnerCarousel from "../../components/mahasiswa/partner-carousel";
 import PartnerCard from "../../components/mahasiswa/partner-card";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import KompetisiCard from "../../components/mahasiswa/kompetisi-card";
 
-// import dummy posters
-import GemastikLogo from '../../assets/dummy poster/gemastik.png'
-import KnmipaLogo from '../../assets/dummy poster/knmipa.png'
-import PimnasLogo from '../../assets/dummy poster/pimnas.png'
-import PeksiminasLogo from '../../assets/dummy poster/peksiminas.jpg'
-import KJILogo from '../../assets/dummy poster/kji.png'
+import { dummyKompetisi, dummyPartners } from "../../data";
 
 export default function MahasiswaHome() {
-    const dummyPhoto = 'https://source.unsplash.com/random/?person'
-    const dummyKompetisi = [
-        {
-            name: 'Pagelaran Mahasiswa Nasional Bidang Teknologi Informasi dan Komunikasi 2023',
-            img: GemastikLogo
-        },
-        {
-            name: 'Olimpiade Nasional Matematika dan Ilmu Pengetahuan Alam',
-            img: KnmipaLogo
-        },
-        {
-            name: 'Pekan Ilmiah Mahasiswa Nasional',
-            img: PimnasLogo
-        },
-        {
-            name: 'Pekan Seni Mahasiswa Nasional XVI',
-            img: PeksiminasLogo
-        },
-        {
-            name: 'Kompetisi Jembatan Indonesia (KJI)',
-            img: KJILogo
-        },
-    ]
-
-    const dummyPartners = [
-        {
-            nama: 'Afiqur Rahman',
-            fakultas: 'Fasilkom',
-            skills: [
-                'Backend Developer',
-                'Devops Engineer'
-            ],
-            foto: 'https://source.unsplash.com/random/?person'
-        },
-        {
-            nama: 'Syah Reza Pahlevi',
-            fakultas: 'Fasilkom',
-            skills: [
-                'Business Analyst',
-                'UI/UX Design',
-                'Product Design'
-            ],
-            foto: 'https://source.unsplash.com/random/?person'
-        },
-        {
-            nama: 'Syah Reza Pahlevi',
-            fakultas: 'Fasilkom',
-            skills: [
-                'Business Analyst',
-                'UI/UX Design',
-                'Product Design'
-            ],
-            foto: 'https://source.unsplash.com/random/?person'
-        },
-    ]
-
     return (
         <MahasiswaLayout>
             <div className='flex flex-row items-stretch text-white gap-4'>

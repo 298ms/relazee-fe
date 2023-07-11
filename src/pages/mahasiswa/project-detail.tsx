@@ -1,33 +1,10 @@
 import { useState } from "react";
 import MahasiswaLayout from "../../components/mahasiswa/layout";
 
+import { dummyTasks } from "../../data";
+
 export default function MahasiswaProjectDetail() {
-    const tasks = [
-        {
-            team: '298 ms',
-            event: 'Gemastik',
-            description: 'Revisi BAB 3 bagian metode',
-            time: '7 hari yang lalu',
-            status: true,
-            color: 'green'
-        },
-        {
-            team: 'Salah Jurusan',
-            event: 'PIMNAS',
-            description: 'Revisi BAB 3 bagian metode',
-            time: '7 hari yang lalu',
-            status: true,
-            color: 'blue'
-        },
-        {
-            team: 'Sebelumnya',
-            event: 'Gemastik',
-            description: 'Revisi BAB 3 bagian metode',
-            time: '7 hari yang lalu',
-            status: false,
-            color: 'red'
-        },
-    ]
+    const tasks = dummyTasks
 
     const [showTaskModal, setShowTaskModal] = useState(false)
 
