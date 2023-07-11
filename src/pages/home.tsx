@@ -50,7 +50,7 @@ export default function Home() {
                     <img src={SS} alt="" className='rounded-lg shadow shadow-2xl' />
                 </div>
             </header>
-            <section id="data" className='container mx-auto flex flex-col items-center py-10 text-center px-20 gap-7'>
+            <section id="data" className='container mx-auto flex flex-col items-center py-20 text-center px-20 gap-7'>
                 <h2 className='font-bold text-3xl'>Statistik Pengguna</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ullam distinctio obcaecati. Alias neque autem aliquam.</p>
                 <div className='flex flex-row items-stretch justify-between gap-5'>
@@ -68,7 +68,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section id="solution" className='container mx-auto flex flex-col items-center py-10 text-center px-20 gap-7'>
+            <section id="solution" className='container mx-auto flex flex-col items-center py-20 text-center px-20 gap-7'>
                 <h2 className='font-bold text-3xl'>Solusi</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ullam distinctio obcaecati. Alias neque autem aliquam.</p>
                 <div className='flex flex-row items-stretch justify-between gap-5'>
@@ -94,7 +94,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section id="actor" className='container mx-auto px-20 flex flex-row gap-5 py-10'>
+            <section id="actor" className='container mx-auto px-20 flex flex-row gap-5 py-20'>
                 <div className='w-1/3'>
                     <h2 className='font-bold text-3xl'>Aktor & Layanan</h2>
                 </div>
@@ -116,7 +116,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section id="pricing" className='container mx-auto flex flex-col items-center py-10 px-20 gap-5'>
+            <section id="pricing" className='container mx-auto flex flex-col items-center py-20 px-20 gap-5'>
                 <h2 className='font-bold text-3xl'>Pricing</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ullam distinctio obcaecati. Alias neque autem aliquam.</p>
                 <div>
