@@ -53,7 +53,7 @@ export default function MahasiswaLogin() {
                             </div>
                         </div>
                         <a href="#" className='text-gray-500 self-end'>Lupa Password?</a>
-                        <button onClick={() => navigate('/')} className='bg-relazee-blue rounded-lg py-2 text-white'>Masuk</button>
+                        <button onClick={() => navigate('/home')} className='bg-relazee-blue rounded-lg py-2 text-white'>Masuk</button>
                         <span className='text-center text-gray-500 font-medium'>Don't have an account? <Link to={'/register'} className='text-relazee-blue'>Sign Up here</Link></span>
                     </div>
                 </div>

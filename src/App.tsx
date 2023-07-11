@@ -17,14 +17,14 @@ import MahasiswaDosen from './pages/mahasiswa/dosen'
 function App() {
     return (
         <Routes>
-            <Route path='/home' element={<Home />} />
+            <Route path='/' element={<Home />} />
             <Route path='/login' element={<MahasiswaLogin />} />
             <Route path='/register' element={<MahasiswaRegister />} />
             <Route path='/onboarding' element={<MahasiswaOnboarding />} />
             <Route path='/smartbot' element={<MahasiswaSmartbot />} />
             <Route path='/projects' element={<MahasiswaProject />} />
             <Route path='/projects/:id' element={<MahasiswaProjectDetail />} />
-            <Route path="/" element={<MahasiswaHome />} />
+            <Route path="/home" element={<MahasiswaHome />} />
             <Route path="/more" element={<MahasiswaMore />}>
                 <Route path='partner' element={<MahasiswaPartner />} />
                 <Route path='kompetisi' element={<MahasiswaKompetisi />} />

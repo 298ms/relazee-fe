@@ -165,7 +165,7 @@ function SearchForm({ setDisplayForm }: any) {
             </div>
             <div className='flex flex-col h-full container mx-auto mt-5'>
                 <div className='flex justify-start'>
-                    <Link to={'/'} className='inline-block rounded-lg border border-gray-300 px-4 py-1'>Kembali</Link>
+                    <Link to={'/home'} className='inline-block rounded-lg border border-gray-300 px-4 py-1'>Kembali</Link>
                 </div>
                 <div className='flex flex-col items-center w-full'>
                     <div className='flex flex-col w-[400px] gap-3'>
@@ -255,7 +255,7 @@ function ProfilePhoto() {
             <h1 className='font-bold text-3xl text-center'>Foto Profil</h1>
             <div className='w-[300px] aspect-square bg-center bg-cover' style={{ backgroundImage: `url(${defaultProfile})` }}></div>
             <input type="file" name="photo" id="photo" />
-            <button className='bg-relazee-blue rounded-lg py-2 text-white' onClick={() => { navigate('/') }}>Selanjutnya</button>
+            <button className='bg-relazee-blue rounded-lg py-2 text-white' onClick={() => { navigate('/home') }}>Selanjutnya</button>
         </div>
     )
 }

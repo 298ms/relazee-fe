@@ -20,7 +20,7 @@ export default function MahasiswaOnboarding() {
                         form == 1 ?
                             <button className='inline-block rounded-lg border border-gray-300 px-4 py-1' onClick={() => setForm(2)}>Lewati</button>
                             :
-                            <Link to={'/'} className='inline-block rounded-lg border border-gray-300 px-4 py-1'>Lewati</Link>
+                            <Link to={'/home'} className='inline-block rounded-lg border border-gray-300 px-4 py-1'>Lewati</Link>
                     }
                 </div>
                 <div className='flex flex-col items-center w-full'>
@@ -80,7 +80,7 @@ function ProfilePhoto() {
             <h1 className='font-bold text-3xl text-center'>Foto Profil</h1>
             <div className='w-[300px] aspect-square bg-center bg-cover' style={{ backgroundImage: `url(${defaultProfile})` }}></div>
             <input type="file" name="photo" id="photo" />
-            <button className='bg-relazee-blue rounded-lg py-2 text-white' onClick={() => { navigate('/') }}>Selanjutnya</button>
+            <button className='bg-relazee-blue rounded-lg py-2 text-white' onClick={() => { navigate('/home') }}>Selanjutnya</button>
         </div>
     )
 }
