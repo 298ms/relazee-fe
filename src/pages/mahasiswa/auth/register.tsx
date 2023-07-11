@@ -112,7 +112,7 @@ function Biodata({ fullname, fullnameHandleChange, angkatan, angkatanHandleChang
             <div className='flex flex-col gap-1'>
                 <label htmlFor="" className='text-gray-500 font-medium'>Fakultas</label>
                 <div className="relative w-full">
-                    <select id="style" defaultValue={fakultas} onChange={(e) => fakultasHandleChange} className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+                    <select id="style" defaultValue={fakultas} onChange={(e) => fakultasHandleChange} className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
                         <option value={0}>Pilih fakultas</option>
                         <option value={1}>Fasilkom</option>
                         <option value={2}>Faperta</option>
