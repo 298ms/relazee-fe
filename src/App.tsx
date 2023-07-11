@@ -11,10 +11,12 @@ import MahasiswaOnboarding from './pages/mahasiswa/onboarding'
 import MahasiswaSmartbot from './pages/mahasiswa/smartbot'
 import MahasiswaProject from './pages/mahasiswa/projects'
 import MahasiswaProjectDetail from './pages/mahasiswa/project-detail'
+import Home from './pages/home'
 
 function App() {
     return (
         <Routes>
+            <Route path='/home' element={<Home />} />
             <Route path='/login' element={<MahasiswaLogin />} />
             <Route path='/register' element={<MahasiswaRegister />} />
             <Route path='/onboarding' element={<MahasiswaOnboarding />} />
