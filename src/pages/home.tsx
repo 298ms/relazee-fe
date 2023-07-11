@@ -18,10 +18,10 @@ export default function Home() {
                         <img src={Logo} alt="" />
                     </div>
                     <ul className="flex flex-row items-center gap-20 font-medium">
-                        <li><a href="#">Our Clients</a></li>
-                        <li><a href="#">Features</a></li>
+                        <li><a href="#data">Our Clients</a></li>
+                        <li><a href="#solution">Features</a></li>
                         {/* <li><a href="#">Partnership</a></li> */}
-                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
                     </ul>
                     <div className="flex flex-row items-center gap-3">
                         <Link to={'/login'} className="bg-custom-green px-4 py-2 rounded-lg font-medium">Sign In</Link>
