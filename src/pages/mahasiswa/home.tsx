@@ -1,33 +1,38 @@
 import MahasiswaLayout from "../../components/mahasiswa/layout";
-import DummyPoster from '../../assets/dummy-poster.png'
-import DummyPoster2 from '../../assets/dummy-poster2.png'
 import PartnerCarousel from "../../components/mahasiswa/partner-carousel";
 import PartnerCard from "../../components/mahasiswa/partner-card";
 import { Link, NavLink } from "react-router-dom";
 import KompetisiCard from "../../components/mahasiswa/kompetisi-card";
 
+// import dummy posters
+import GemastikLogo from '../../assets/dummy poster/gemastik.png'
+import KnmipaLogo from '../../assets/dummy poster/knmipa.png'
+import PimnasLogo from '../../assets/dummy poster/pimnas.png'
+import PeksiminasLogo from '../../assets/dummy poster/peksiminas.jpg'
+import KJILogo from '../../assets/dummy poster/kji.png'
+
 export default function MahasiswaHome() {
     const dummyPhoto = 'https://source.unsplash.com/random/?person'
     const dummyKompetisi = [
         {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
+            name: 'Pagelaran Mahasiswa Nasional Bidang Teknologi Informasi dan Komunikasi 2023',
+            img: GemastikLogo
         },
         {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster2
+            name: 'Olimpiade Nasional Matematika dan Ilmu Pengetahuan Alam',
+            img: KnmipaLogo
         },
         {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
+            name: 'Pekan Ilmiah Mahasiswa Nasional',
+            img: PimnasLogo
         },
         {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster2
+            name: 'Pekan Seni Mahasiswa Nasional XVI',
+            img: PeksiminasLogo
         },
         {
-            name: 'National Paper Competition HMDEP USU 2022',
-            img: DummyPoster
+            name: 'Kompetisi Jembatan Indonesia (KJI)',
+            img: KJILogo
         },
     ]
 
