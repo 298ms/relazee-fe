@@ -88,7 +88,7 @@ export default function MahasiswaPartnerDetail() {
                 <div>
                     <h3 className="font-medium text-lg">Bio</h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus incidunt unde obcaecati maxime odit necessitatibus soluta excepturi nostrum, natus molestias, dicta cumque assumenda pariatur consequuntur facilis nam? Ad, quis dicta!
+                        Saya adalah mahasiswa semester 6 dari Universitas Jember. Memiliki beberapa keahlian terkait pengembangan software seperti Frontend Development dan Mobile Development. Selain itu saya juga memiliki keahlian di bidang desain dan memiliki beberapa pengalaman di bidang Bisnis dan Karya Tulis Ilmiah.
                     </p>
                 </div>
             </div>
