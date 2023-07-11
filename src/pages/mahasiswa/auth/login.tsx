@@ -29,7 +29,7 @@ export default function MahasiswaLogin() {
                                 onChange={(e) => setMahasiswaEmail(e.target.value)}
                                 type="email"
                                 id='email'
-                                placeholder="Masukkan email atau mahasiswaname"
+                                placeholder="Masukkan email atau username"
                                 className='rounded-md bg-transparent border px-4 py-2 w-full'
                             />
                         </div>

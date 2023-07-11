@@ -56,7 +56,7 @@ function Account({ username, usernameHandleChange, email, emailHandleChange, set
                 <label htmlFor="" className='text-gray-500 font-medium'>Username</label>
                 <input
                     value={username}
-                    onChange={(e) => usernameHandleChange}
+                    onChange={(e) => usernameHandleChange(e.target.value)}
                     type="text"
                     id='username'
                     placeholder="Buat username unik"
@@ -68,7 +68,7 @@ function Account({ username, usernameHandleChange, email, emailHandleChange, set
                 <div className="relative w-full">
                     <input
                         value={email}
-                        onChange={(e) => emailHandleChange}
+                        onChange={(e) => emailHandleChange(e.target.value)}
                         type="email"
                         id="email"
                         className="bg-transparent border rounded-lg block w-full px-4 p-2.5"
@@ -89,7 +89,7 @@ function Biodata({ fullname, fullnameHandleChange, angkatan, angkatanHandleChang
                 <label htmlFor="" className='text-gray-500 font-medium'>Nama Lengkap</label>
                 <input
                     value={fullname}
-                    onChange={(e) => fullnameHandleChange}
+                    onChange={(e) => fullnameHandleChange(e.target.value)}
                     type="text"
                     id='fullname'
                     placeholder="Masukkan nama lengkap"
@@ -101,7 +101,7 @@ function Biodata({ fullname, fullnameHandleChange, angkatan, angkatanHandleChang
                 <div className="relative w-full">
                     <input
                         value={angkatan}
-                        onChange={(e) => angkatanHandleChange}
+                        onChange={(e) => angkatanHandleChange(e.target.value)}
                         type="number"
                         id="angkatan"
                         className="bg-transparent border rounded-lg block w-full px-4 p-2.5"
@@ -112,7 +112,7 @@ function Biodata({ fullname, fullnameHandleChange, angkatan, angkatanHandleChang
             <div className='flex flex-col gap-1'>
                 <label htmlFor="" className='text-gray-500 font-medium'>Fakultas</label>
                 <div className="relative w-full">
-                    <select id="style" defaultValue={fakultas} onChange={(e) => fakultasHandleChange} className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+                    <select id="style" defaultValue={fakultas} onChange={(e) => fakultasHandleChange(e.target.value)} className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
                         <option value={0}>Pilih fakultas</option>
                         <option value={1}>Fasilkom</option>
                         <option value={2}>Faperta</option>

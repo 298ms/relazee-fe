@@ -27,7 +27,7 @@ function TagsInput({ ...props }) {
                 onKeyDown={handleKeyDown}
                 type="text"
                 className="focus:outline-none w-full"
-                placeholder="Type your skill and press enter to add"
+                placeholder="Type and press enter to add"
                 {...props}
             />
         </div>
