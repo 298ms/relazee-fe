@@ -126,10 +126,10 @@ export default function Home() {
             <section id="cta" className='py-20 px-40 bg-relazee-blue-light'>
                 <div className='container mx-auto flex flex-row items-center gap-5 '>
                     <div className='w-1/2'>
-                        <h2 className='font-bold text-3xl'>Ready for the power? Start your free trial today</h2>
+                        <h2 className='font-bold text-3xl'>Tunggu apalagi? Wujudkan mimpimu bersama Relazee!</h2>
                     </div>
                     <div className='w-1/2 flex flex-col items-center'>
-                        <Link to={'/register'} className='bg-relazee-blue text-white rounded-lg px-4 py-2'>Sign Up now!</Link>
+                        <Link to={'/register'} className='bg-relazee-blue text-white rounded-lg px-4 py-2'>Daftar sekarang!</Link>
                     </div>
                 </div>
             </section>
