@@ -6,10 +6,29 @@ import Mentoring from '../assets/landingpage/solutions/mentoring.png'
 import Connect from '../assets/landingpage/solutions/connect.png'
 import Event from '../assets/landingpage/solutions/event.png'
 import Project from '../assets/landingpage/solutions/project.png'
+import { useState } from 'react'
+
+const NewWebModal = ({ showModal, setShowModal }: any) => {
+    return (
+        <div className={`${showModal ? 'flex' : 'hidden'} w-full h-screen fixed top-0 left-0 bg-black/[.7] items-center justify-center`}>
+            <div className='bg-white rounded-lg p-4 max-w-[40%] flex flex-col gap-3'>
+                <h1 className='text-yellow-500 font-bold text-2xl'>Warning!</h1>
+                <p>This website is the old Relazee website used for the initial prototype. The new website with a fresh design is currently under development.</p>
+                <div className="flex flex-col lg:flex-row gap-4 items-stretch">
+                    <button className='bg-relazee-blue text-white rounded-lg px-4 py-2' onClick={() => setShowModal(false)}>Stay</button>
+                    <a href="https://relazee-next.vercel.app" className='bg-[#FF6934] text-white rounded-lg px-4 py-2'>Go to the new website!</a>
+                </div>
+            </div>
+        </div>
+    )
+}
 
 export default function Home() {
+    const [showModal, setShowModal] = useState(true)
+
     return (
-        <div>
+        <>
+            <NewWebModal showModal={showModal} setShowModal={setShowModal} />
             <nav className="bg-white shadow-lg py-7 px-20 hidden lg:block">
                 <div className="container mx-auto flex flex-row items-center justify-between">
                     <div className="flex flex-row gap-2 items-center">
@@ -29,8 +48,18 @@ export default function Home() {
                     </div>
                 </div>
             </nav>
-            <header className="container mx-auto flex flex-row items-center h-[85vh]">
-                <div className='w-1/2 flex flex-col items-center justify-center'>
+            <nav className="bg-white shadow-lg py-7 lg:hidden">
+                <div className="container mx-auto flex flex-row justify-between items-center px-10">
+                    <div className="flex flex-row gap-3 items-center">
+                        {/* <img src="https://nafishandoko.github.io/SkwnFrontendDev-a-Nafis-Arinda-Rizky-Putra-Handoko/assets/logo.png" alt="" className="w-3/5" />
+                        <span className="text-custom-brown font-semibold text-2xl">Dekoor</span> */}
+                        <img src={Logo} alt="" />
+                    </div>
+                    <button><i className="bi bi-list text-4xl"></i></button>
+                </div>
+            </nav>
+            <header className="container mx-auto flex flex-col md:flex-row items-center h-[85vh]">
+                <div className='md:w-1/2 flex flex-col items-center justify-center'>
                     <div className="flex flex-col items-center lg:items-start px-10 lg:px-28 gap-5">
                         <h1 className="font-bold text-4xl text-center lg:text-start">Jelajahi beragam kompetisi dan temukan partnermu di Relazee</h1>
                         <div className="flex flex-col lg:flex-row gap-4 items-stretch">
@@ -38,6 +67,7 @@ export default function Home() {
                                 {/* <i className="bi bi-search"></i> */}
                                 <span>Coba sekarang!</span>
                             </a>
+                            <a href="https://relazee-next.vercel.app" className='bg-[#FF6934] text-white rounded-lg px-4 py-2'>Go to the new website!</a>
                             {/* <a href="#"
                                 className="border border-custom-brown font-regular text-custom-brown py-3 px-5 rounded-lg space-x-2">
                                 <i className="bi bi-play-circle"></i>
@@ -46,14 +76,14 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className='w-1/2 h-full flex flex-col justify-center'>
+                <div className='md:w-1/2 md:h-full flex flex-col justify-center px-10 md:px-0'>
                     <img src={SS} alt="" className='rounded-lg shadow shadow-2xl' />
                 </div>
             </header>
             <section id="data" className='container mx-auto flex flex-col items-center py-20 text-center px-20 gap-7'>
                 <h2 className='font-bold text-3xl'>Statistik Pengguna</h2>
                 <p>Ratusan mahasiswa, puluhan dosen, dan puluhan universitas telah bergabung di Relazee. Sekarang giliranmu!</p>
-                <div className='flex flex-row items-stretch justify-between gap-5'>
+                <div className='flex flex-col md:flex-row items-stretch justify-between gap-5'>
                     <div className='bg-white rounded-lg shadow shadow-2xl flex flex-col w-[200px] py-5'>
                         <span className='text-3xl text-relazee-blue font-bold'>652</span>
                         <span className='text-gray-500'>Mahasiswa</span>
@@ -71,23 +101,23 @@ export default function Home() {
             <section id="solution" className='container mx-auto flex flex-col items-center py-20 text-center px-20 gap-7'>
                 <h2 className='font-bold text-3xl'>Solusi</h2>
                 <p>Beragam solusi untuk membantumu mencapai ambisimu</p>
-                <div className='flex flex-row items-stretch justify-between gap-5'>
-                    <div className='bg-relazee-gray rounded-lg flex flex-col w-1/4 py-10 px-6 gap-3 items-center'>
+                <div className='flex flex-col md:flex-row items-stretch justify-between gap-5'>
+                    <div className='bg-relazee-gray rounded-lg flex flex-col w-full md:w-1/4 py-10 px-6 gap-3 items-center'>
                         <img src={Mentoring} width={50} alt="" />
                         <h3 className='font-bold text-2xl'>Mentoring</h3>
                         <p>Relazee menyediakan fitur penemuan pembimbing yang memudahkan mahasiswa dalam mencari dan berkomunikasi dengan dosen pembimbing yang tepat.</p>
                     </div>
-                    <div className='bg-relazee-gray rounded-lg flex flex-col w-1/4 py-10 px-6 gap-3 items-center'>
+                    <div className='bg-relazee-gray rounded-lg flex flex-col w-full md:w-1/4 py-10 px-6 gap-3 items-center'>
                         <img src={Connect} width={50} alt="" />
                         <h3 className='font-bold text-2xl'>Connect</h3>
                         <p>Relazee menyediakan platform yang memudahkan mahasiswa dalam mencari rekan yang sesuai dengan minat, keahlian, dan tujuan mereka.</p>
                     </div>
-                    <div className='bg-relazee-gray rounded-lg flex flex-col w-1/4 py-10 px-6 gap-3 items-center'>
+                    <div className='bg-relazee-gray rounded-lg flex flex-col w-full md:w-1/4 py-10 px-6 gap-3 items-center'>
                         <img src={Event} width={50} alt="" />
                         <h3 className='font-bold text-2xl'>Event Information</h3>
                         <p>Relazee menyediakan platform yang memudahkan mahasiswa dalam Menemukan dan mengikuti berbagai acara, kompetisi, dan perlombaan</p>
                     </div>
-                    <div className='bg-relazee-gray rounded-lg flex flex-col w-1/4 py-10 px-6 gap-3 items-center'>
+                    <div className='bg-relazee-gray rounded-lg flex flex-col w-full md:w-1/4 py-10 px-6 gap-3 items-center'>
                         <img src={Project} width={50} alt="" />
                         <h3 className='font-bold text-2xl'>Project Management</h3>
                         <p>Relazee menyediakan fitur manajemen kegiatan yang memungkinkan mahasiswa mengelola proyek, jadwal, dan tugas dengan lebih efisien. </p>
@@ -140,7 +170,7 @@ export default function Home() {
                         <div className="flex flex-row items-center gap-3">
                             {/* <img src="https://nafishandoko.github.io/SkwnFrontendDev-a-Nafis-Arinda-Rizky-Putra-Handoko/assets/logo.png" alt="" width="30" />
                                 <span className="font-bold">Dekoor</span> */}
-                                <img src={Logo} alt="" />
+                            <img src={Logo} alt="" />
                         </div>
                         <p className="">Relazee is a lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita officia dolorum aperiam culpa reiciendis, ipsa illo harum eius incidunt vel pariatur odit at sunt asperiores atque quidem doloribus doloremque magni!</p>
                         <span className=" hidden lg:inline-block">©Copyright 2022 Relazee</span>
@@ -170,6 +200,6 @@ export default function Home() {
                     </div>
                 </div>
             </footer>
-        </div>
+        </>
     )
 }
